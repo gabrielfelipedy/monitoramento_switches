@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* CONSTANTS */
+
+:root {
+    --font-h1: clamp(1rem, 4vw, 5rem);
+    --font-h2: clamp(1rem, 3vw, 4rem);
+    --font-h3: clamp(1rem, 2vw, 3rem);
+}
+
+/* CSS RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1e1e1e;
+    font-family: 'Inter', sans-serif;
+    color: #e1e1e1;
+    display: flex;
+    justify-content: center;
+}
+
+/* END CSS RESET */
+
+/* BORDER STYLES */
+
+.border {
+    border: 1px solid rgb(122, 122, 122);
+}
+
+.b-round {
+    border-radius: 1rem;
+}
+
+/* ALIGNMENT */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* MARGINS AND PADDING */
+
+.padding {
+    padding: 1rem;
+}
+
+.ext-margin {
+    margin: 1rem 1rem;
+}
+
+/* FONT SiZES AND STYLE */
+
+h1 {
+    font-weight: 900;
+    font-size: var(--font-h1);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: var(--font-h2);
+}
+
+h3 {
+    font-size: var(--font-h3);
+}
+
+/* IMAGES */
+
+img {
+    width: 100%;
+}
