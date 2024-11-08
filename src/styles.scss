@@ -10,19 +10,31 @@
     --font-h1: clamp(1rem, 4vw, 5rem);
     --font-h2: clamp(1rem, 3vw, 4rem);
     --font-h3: clamp(1rem, 2vw, 3rem);
+
     --tam-width-switch-6360: 90vw;
     --tam-width-switch-9900: 40vw;
+
     --tam-link_6360_port: 1.7vw;
+
     --tam-link_9900_port: 0.8vw;
     --tam-link_9900_fibra: 0.8vw;
+
+    --tam-link_9900_uplink1: 1.2vw;
+    --tam-link_9900_uplink2: 1.5vw;
+
     --tam-uplink_6360_port: 2.6vw;
 
     --top-6360-space-ports: 7.2vw;
     --left-6360-space-ports: 31.67vw;
+
     --top-9900-space-ports: 18.1vw;
     --left-9900-space-ports: 7.65vw;
+
     --top-9900-space-fibra: 14vw;
     --left-9900-space-fibra: 7.65vw;
+
+    --top-9900-space-uplinks: 6.45vw;
+    --left-9900-space-uplinks: 12.25vw;
 }
 
 /* CSS RESET */
@@ -130,6 +142,15 @@ h3 {
     left: var(--left-9900-space-fibra);
 }
 
+.absolute-uplinks-9900 {
+    position: absolute;
+    top: var(--top-9900-space-uplinks);
+    left: var(--left-9900-space-uplinks);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .block {
     display: inline-block;
     // border: 1px solid blue;
@@ -152,8 +173,22 @@ h3 {
     // height: var(--tam-link_6360_port);
 }
 
-.block:hover, .block-uplink:hover, .block-fibra-9900:hover {
-    scale: 1.1;
+.block-uplink1-9900 {
+    display: inline-block;
+    // border: 1px solid blue;
+    width: var(--tam-link_9900_uplink1);
+    // height: var(--tam-link_6360_port);
+}
+
+.block-uplink2-9900 {
+    display: inline-block;
+    // border: 1px solid blue;
+    width: var(--tam-link_9900_uplink2);
+    // height: var(--tam-link_6360_port);
+}
+
+.block:hover, .block-uplink:hover, .block-9900:hover, .block-fibra-9900:hover, .block-uplink1-9900:hover, .block-uplink2-9900:hover {
+    scale: 1.2;
     cursor: pointer;
 }
 
@@ -191,6 +226,28 @@ h3 {
     margin-right: 0.7vw;
     column-gap: 0.34vw;
     row-gap: 0.3vw;
+}
+
+.container-uplink1-9900 {
+    display: inline-grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, auto);
+    grid-auto-flow: column;
+    margin-right: 9vw;
+    place-items: end;
+    column-gap: 1.6vw;
+    margin-bottom: 3.2vw;
+}
+
+.container-uplink2-9900 {
+    display: inline-grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, auto);
+    grid-auto-flow: column;
+    margin-right: 1.1vw;
+    place-items: end;
+    column-gap: 2.4vw;
+    margin-bottom: 3.2vw;
 }
 
 
