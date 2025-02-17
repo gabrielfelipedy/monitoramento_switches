@@ -1,52 +1,28 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HttpRequestService } from './http-request.service';
+import { ApiObservableService } from './api-observable.service';
 import { Constants } from '../../constants';
 import { PortList } from '../../interfaces/PortList';
 import { Port } from '../../interfaces/Port';
+import { ArrayPortElement } from '../../interfaces/ArrayPortElement';
+import { NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
+import { Acesso1LaranjalComponent } from './acesso1-laranjal/acesso1-laranjal.component';
+import { CoreLaranjalComponent } from './core-laranjal/core-laranjal.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NgFor, CommonModule, Acesso1LaranjalComponent, CoreLaranjalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'monitoramento_switches';
-  private apiURL = Constants.API_URL
+  
+  ports_core_laranjal: Array<ArrayPortElement> = new Array<ArrayPortElement>()
 
-  private httpService = inject(HttpRequestService)
+  constructor(private httpService: HttpRequestService, private api_observable: ApiObservableService) {}
 
-  getHome()
-  {
-    const PortsXNI = new Array<Port>()
-
-    this.httpService.get(this.apiURL).subscribe({
-      next: (data: PortList) => {
-        
-
-        data.result.forEach((port: Port) => {
-          if(port.name.substring(31, 34) === 'XNI') {
-            
-            PortsXNI.push(port)
-          }
-        })
-
-        PortsXNI.sort((a: Port, b: Port) => {
-          return parseInt(a.itemid) < parseInt(b.itemid) ? -1 : parseInt(a.itemid) > parseInt(b.itemid) ? 1 : 0
-        })
-
-        console.log(PortsXNI)
-      },
-      error: (err) => {
-        console.error(err)
-      }
-    })
-  }
-
-  ngOnInit()
-  {
-    this.getHome()
-  }
 }
