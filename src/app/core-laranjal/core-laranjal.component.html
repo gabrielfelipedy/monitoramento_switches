@@ -10,10 +10,7 @@
         <img
           *ngFor="let port of ports_core_laranjal; let i = index"
           class="block-uplink1-9900"
-          [src]="
-            port.active
-              ? 'assets/img/ports/link/link_9900_up.png'
-              : 'assets/img/ports/link/link_9900_down.png'
+          [src]="'assets/img/ports/link/link_9900_' + (port.active ? 'up' : 'down') + '.png'
           "
           alt="uplink_9900_up"
           [title]="

@@ -23,7 +23,7 @@ export class CoreLaranjalComponent {
 
   processData(data: Array<Port>)
   {
-    let new_ports_core_laranjal = []
+    let new_ports_core_laranjal = new Array<ArrayPortElement>()
 
     for(let i = 0; i < data?.length / 2; i++)
     {
@@ -38,7 +38,7 @@ export class CoreLaranjalComponent {
       new_ports_core_laranjal.push(newPort)
     }
 
-    console.log("dados processados:")
+    console.log("dados processados core laranjal:")
     return new_ports_core_laranjal
   }
 
