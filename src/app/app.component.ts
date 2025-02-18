@@ -10,11 +10,12 @@ import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { Acesso1LaranjalComponent } from './acesso1-laranjal/acesso1-laranjal.component';
 import { CoreLaranjalComponent } from './core-laranjal/core-laranjal.component';
+import { Acesso2LaranjalComponent } from './acesso2-laranjal/acesso2-laranjal.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, CommonModule, Acesso1LaranjalComponent, CoreLaranjalComponent],
+  imports: [RouterOutlet, NgFor, CommonModule, Acesso1LaranjalComponent, CoreLaranjalComponent, Acesso2LaranjalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
