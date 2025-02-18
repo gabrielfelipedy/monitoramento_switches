@@ -2,57 +2,57 @@
 
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 /* CONSTANTS */
 
 :root {
-    --font-h1: clamp(1rem, 4vw, 5rem);
-    --font-h2: clamp(1rem, 3vw, 4rem);
-    --font-h3: clamp(1rem, 2vw, 3rem);
+  --font-h1: clamp(1rem, 4vw, 5rem);
+  --font-h2: clamp(1rem, 3vw, 4rem);
+  --font-h3: clamp(1rem, 2vw, 3rem);
 
-    --tam-width-switch-6360: 90vw;
-    --tam-width-switch-9900: 40vw;
+  --tam-width-switch-6360: 90vw;
+  --tam-width-switch-9900: 40vw;
 
-    --tam-link_6360_port: 1.7vw;
+  --tam-link_6360_port: 1.7vw;
 
-    --tam-link_9900_port: 0.8vw;
-    --tam-link_9900_fibra: 0.8vw;
+  --tam-link_9900_port: 0.8vw;
+  --tam-link_9900_fibra: 0.8vw;
 
-    --tam-link_9900_uplink1: 1.2vw;
-    --tam-link_9900_uplink2: 1.5vw;
+  --tam-link_9900_uplink1: 1.2vw;
+  --tam-link_9900_uplink2: 1.5vw;
 
-    --tam-uplink_6360_port: 2.6vw;
+  --tam-uplink_6360_port: 2.4vw;
 
-    --top-6360-space-ports: 7.2vw;
-    --left-6360-space-ports: 31.67vw;
+  --top-6360-space-ports: 7.2vw;
+  --left-6360-space-ports: 31.67vw;
 
-    --top-9900-space-ports: 18.1vw;
-    --left-9900-space-ports: 7.65vw;
+  --top-9900-space-ports: 18.1vw;
+  --left-9900-space-ports: 7.65vw;
 
-    --top-9900-space-fibra: 14vw;
-    --left-9900-space-fibra: 7.65vw;
+  --top-9900-space-fibra: 14vw;
+  --left-9900-space-fibra: 7.65vw;
 
-    --top-9900-space-uplinks: 6.45vw;
-    --left-9900-space-uplinks: 12.25vw;
+  --top-9900-space-uplinks: 6.45vw;
+  --left-9900-space-uplinks: 12.25vw;
 }
 
 /* CSS RESET */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #1e1e1e;
-    font-family: 'Inter', sans-serif;
-    color: #e1e1e1;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  font-family: "Inter", sans-serif;
+  color: #e1e1e1;
+  display: flex;
+  justify-content: center;
 }
 
 /* END CSS RESET */
@@ -60,218 +60,263 @@ body {
 /* BORDER STYLES */
 
 .border {
-    border: 1px solid rgb(122, 122, 122);
+  border: 1px solid rgb(122, 122, 122);
 }
 
 .b-round {
-    border-radius: 1rem;
+  border-radius: 1rem;
+}
+
+b-debug {
+  border: 1px solid red;
 }
 
 /* ALIGNMENT */
 
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 /* MARGINS AND PADDING */
 
 .padding {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .ext-margin {
-    margin: 1rem 1rem;
+  margin: 1rem 1rem;
 }
 
 /* FONT SiZES AND STYLE */
 
-h1, h2, h3 {
-    margin-top: 2vw;
-    margin-bottom: 4vw;
+h1,
+h2,
+h3 {
+  margin-top: 2vw;
+  margin-bottom: 4vw;
 }
 
 h1 {
-    font-weight: 900;
-    font-size: var(--font-h1);
+  font-weight: 900;
+  font-size: var(--font-h1);
 }
 
 h2 {
-    font-weight: 700;
-    font-size: var(--font-h2);
+  font-weight: 700;
+  font-size: var(--font-h2);
 }
 
 h3 {
-    font-size: var(--font-h3);
+  font-size: var(--font-h3);
 }
 
 /* IMAGES */
 
 .switch-6360 {
-    width: var(--tam-width-switch-6360);
+  width: var(--tam-width-switch-6360);
 }
 
 .switch-9900 {
-    width: var(--tam-width-switch-9900);
+  width: var(--tam-width-switch-9900);
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 .absolute {
-    position: absolute;
-    top: var(--top-6360-space-ports);
-    left: var(--left-6360-space-ports);
+  position: absolute;
+  top: var(--top-6360-space-ports);
+  left: var(--left-6360-space-ports);
+}
+
+.absolute-6360-1-12 {
+  position: absolute;
+  top: var(--top-6360-space-ports);
+  left: var(--left-6360-space-ports);
+}
+
+.absolute-6360-13-24 {
+  position: absolute;
+  top: var(--top-6360-space-ports);
+  left: 47.58vw;
+}
+
+.absolute-6360-uplink-rj {
+  position: absolute;
+  top: var(--top-6360-space-ports);
+  left: 63.5vw;
+}
+
+.absolute-6360-uplink-fibra {
+  position: absolute;
+  top: 10vw;
+  left: 66.4vw;
+}
+
+.absolute-6360-console {
+  position: absolute;
+  top: 7.85vw;
+  left: 79.5vw;
 }
 
 .absolute-9900 {
-    position: absolute;
-    top: var(--top-9900-space-ports);
-    left: var(--left-9900-space-ports);
+  position: absolute;
+  top: var(--top-9900-space-ports);
+  left: var(--left-9900-space-ports);
 }
 
 .absolute-fibra-9900 {
-    position: absolute;
-    top: var(--top-9900-space-fibra);
-    left: var(--left-9900-space-fibra);
+  position: absolute;
+  top: var(--top-9900-space-fibra);
+  left: var(--left-9900-space-fibra);
 }
 
 .absolute-uplinks-9900 {
-    position: absolute;
-    top: var(--top-9900-space-uplinks);
-    left: var(--left-9900-space-uplinks);
+  position: absolute;
+  top: var(--top-9900-space-uplinks);
+  left: var(--left-9900-space-uplinks);
 
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+//Tamanhos de cada porta
 
 .block {
-    display: inline-block;
-    // border: 1px solid blue;
-    width: var(--tam-link_6360_port);
-    // height: var(--tam-link_6360_port);
-    margin-right: 0.797vw;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.block-9900 {
-    display: inline-block;
-    // border: 1px solid blue;
-    width: var(--tam-link_9900_port);
-    // height: var(--tam-link_6360_port);
-}
+  width: var(--tam-link_6360_port);
 
-.block-fibra-9900 {
-    display: inline-block;
-    // border: 1px solid blue;
-    width: var(--tam-link_9900_fibra);
-    // height: var(--tam-link_6360_port);
-}
-
-.block-uplink1-9900 {
-    display: inline-block;
-    // border: 1px solid blue;
-    width: var(--tam-link_9900_uplink1);
-    // height: var(--tam-link_6360_port);
-}
-
-.block-uplink2-9900 {
-    display: inline-block;
-    // border: 1px solid blue;
-    width: var(--tam-link_9900_uplink2);
-    // height: var(--tam-link_6360_port);
-}
-
-.block:hover, .block-uplink:hover, .block-9900:hover, .block-fibra-9900:hover, .block-uplink1-9900:hover, .block-uplink2-9900:hover {
-    scale: 1.2;
-    cursor: pointer;
+  overflow: hidden;
 }
 
 .block-uplink {
-    display: inline-block;
-    // border: 1px solid blue;
-    width: var(--tam-uplink_6360_port);
-    // height: var(--tam-uplink_6360_port);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: var(--tam-uplink_6360_port);
+
+  overflow: hidden;
+}
+
+[class^="block"] img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.block-9900 {
+  display: inline-block;
+  // border: 1px solid blue;
+  width: var(--tam-link_9900_port);
+  // height: var(--tam-link_6360_port);
+}
+
+.block-fibra-9900 {
+  display: inline-block;
+  // border: 1px solid blue;
+  width: var(--tam-link_9900_fibra);
+  // height: var(--tam-link_6360_port);
+}
+
+.block-uplink1-9900 {
+  display: inline-block;
+  // border: 1px solid blue;
+  width: var(--tam-link_9900_uplink1);
+  // height: var(--tam-link_6360_port);
+}
+
+.block-uplink2-9900 {
+  display: inline-block;
+  // border: 1px solid blue;
+  width: var(--tam-link_9900_uplink2);
+  // height: var(--tam-link_6360_port);
+}
+
+.block:hover,
+.block-uplink:hover,
+.block-9900:hover,
+.block-fibra-9900:hover,
+.block-uplink1-9900:hover,
+.block-uplink2-9900:hover {
+  scale: 1.2;
+  cursor: pointer;
 }
 
 .container {
-    display: inline-grid;
-    grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: column;
-    margin-right: 0.85vw;
-    row-gap: 1.1vw;
+  display: inline-grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  margin-right: 0.85vw;
+  row-gap: 1.1vw;
+  column-gap: 0.86vw;
 }
 
 .container-9900 {
-    display: inline-grid;
-    grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: column;
-    row-gap: 0.42vw;
-    column-gap: 0.34vw;
-    margin-right: 0.7vw;
+  display: inline-grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  row-gap: 0.42vw;
+  column-gap: 0.34vw;
+  margin-right: 0.7vw;
 }
 
 .container-fibra-9900 {
-    display: inline-grid;
-    grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: column;
-    margin-right: 0.7vw;
-    column-gap: 0.34vw;
-    row-gap: 0.3vw;
+  display: inline-grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  margin-right: 0.7vw;
+  column-gap: 0.34vw;
+  row-gap: 0.3vw;
 }
 
 .container-uplink1-9900 {
-    display: inline-grid;
-    grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(1, auto);
-    grid-auto-flow: column;
-    margin-right: 9vw;
-    place-items: end;
-    column-gap: 1.6vw;
-    margin-bottom: 3.2vw;
+  display: inline-grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(1, auto);
+  grid-auto-flow: column;
+  margin-right: 9vw;
+  place-items: end;
+  column-gap: 1.6vw;
+  margin-bottom: 3.2vw;
 }
 
 .container-uplink2-9900 {
-    display: inline-grid;
-    grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(1, auto);
-    grid-auto-flow: column;
-    margin-right: 1.1vw;
-    place-items: end;
-    column-gap: 2.4vw;
-    margin-bottom: 3.2vw;
+  display: inline-grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(1, auto);
+  grid-auto-flow: column;
+  margin-right: 1.1vw;
+  place-items: end;
+  column-gap: 2.4vw;
+  margin-bottom: 3.2vw;
 }
 
-
 .container-uplinks {
-    display: inline-grid;
-    grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(1, auto);
-    grid-auto-flow: column;
-    margin-right: 1.1vw;
-    margin-left: 3vw;
-    margin-bottom: -0.6vw;
-    place-items: end;
-    column-gap: 0.54vw;
+  display: inline-grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(1, auto);
+  grid-auto-flow: column;
+  
+  place-items: end;
+  column-gap: 0.78vw;
 }
 
 .port-set {
-    display: flex;
-    overflow: hidden;
-}
-
-.last {
-    margin-top: 0.6vw;
-}
-
-.special {
-    margin-left: 0.2vw;
+  display: flex;
+  overflow: hidden;
 }
