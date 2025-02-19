@@ -11,7 +11,9 @@
   --font-h2: clamp(1rem, 3vw, 4rem);
   --font-h3: clamp(1rem, 2vw, 3rem);
 
+  //tamanho dos switches
   --tam-width-switch-6360: 90vw;
+  --tam-width-switch-6900: 79vw;
   --tam-width-switch-9900: 40vw;
 
   --tam-link_6360_port: 1.7vw;
@@ -116,19 +118,27 @@ h3 {
   font-size: var(--font-h3);
 }
 
-/* IMAGES */
+/* TAMANHOS DOS SWITCHES */
 
 .switch-6360 {
   width: var(--tam-width-switch-6360);
+}
+
+.switch-6900 {
+  width: var(--tam-width-switch-6900);
 }
 
 .switch-9900 {
   width: var(--tam-width-switch-9900);
 }
 
+// POSIÇÕES DAS PORTAS EM CIMA DAS IMAGENS DOS SWITCHES
+
 .relative {
   position: relative;
 }
+
+/* switch os6360 */
 
 .absolute {
   position: absolute;
@@ -166,6 +176,28 @@ h3 {
   left: 79.5vw;
 }
 
+/* switch os6900 */
+
+.absolute-6900-1-16 {
+  position: absolute;
+  top: 2.4vw;
+  left: 8.15vw;
+}
+
+.absolute-6900-17-32 {
+  position: absolute;
+  top: 2.4vw;
+  left: 27.3vw;
+}
+
+.absolute-6900-33-48 {
+  position: absolute;
+  top: 2.4vw;
+  left: 46.5vw;
+}
+
+/* switch os9900 */
+
 .absolute-9900 {
   position: absolute;
   top: var(--top-9900-space-ports);
@@ -189,7 +221,7 @@ h3 {
 
 //Tamanhos de cada porta
 
-.block {
+.port-6900 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,7 +231,17 @@ h3 {
   overflow: hidden;
 }
 
-.block-uplink {
+.port-6360 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--tam-link_6360_port);
+
+  overflow: hidden;
+}
+
+.port-6360-uplink {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,7 +251,7 @@ h3 {
   overflow: hidden;
 }
 
-[class^="block"] img {
+[class^="port"] img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -218,9 +260,9 @@ h3 {
   cursor: pointer;
 }
 
-[class^="block"] img:hover {
-    filter: brightness(0.8);
-  }
+[class^="port"] img:hover {
+  filter: brightness(0.8);
+}
 
 .block-9900 {
   display: inline-block;
@@ -260,47 +302,47 @@ h3 {
   column-gap: 0.79vw;
 }
 
-.container-9900 {
-  display: inline-grid;
-  grid-template-columns: repeat(1, auto);
-  grid-template-rows: repeat(2, auto);
-  grid-auto-flow: column;
-  row-gap: 0.42vw;
-  column-gap: 0.34vw;
-  margin-right: 0.7vw;
-}
+// .container-9900 {
+//   display: inline-grid;
+//   grid-template-columns: repeat(1, auto);
+//   grid-template-rows: repeat(2, auto);
+//   grid-auto-flow: column;
+//   row-gap: 0.42vw;
+//   column-gap: 0.34vw;
+//   margin-right: 0.7vw;
+// }
 
-.container-fibra-9900 {
-  display: inline-grid;
-  grid-template-columns: repeat(1, auto);
-  grid-template-rows: repeat(2, auto);
-  grid-auto-flow: column;
-  margin-right: 0.7vw;
-  column-gap: 0.34vw;
-  row-gap: 0.3vw;
-}
+// .container-fibra-9900 {
+//   display: inline-grid;
+//   grid-template-columns: repeat(1, auto);
+//   grid-template-rows: repeat(2, auto);
+//   grid-auto-flow: column;
+//   margin-right: 0.7vw;
+//   column-gap: 0.34vw;
+//   row-gap: 0.3vw;
+// }
 
-.container-uplink1-9900 {
-  display: inline-grid;
-  grid-template-columns: repeat(1, auto);
-  grid-template-rows: repeat(1, auto);
-  grid-auto-flow: column;
-  margin-right: 9vw;
-  place-items: end;
-  column-gap: 1.6vw;
-  margin-bottom: 3.2vw;
-}
+// .container-uplink1-9900 {
+//   display: inline-grid;
+//   grid-template-columns: repeat(1, auto);
+//   grid-template-rows: repeat(1, auto);
+//   grid-auto-flow: column;
+//   margin-right: 9vw;
+//   place-items: end;
+//   column-gap: 1.6vw;
+//   margin-bottom: 3.2vw;
+// }
 
-.container-uplink2-9900 {
-  display: inline-grid;
-  grid-template-columns: repeat(1, auto);
-  grid-template-rows: repeat(1, auto);
-  grid-auto-flow: column;
-  margin-right: 1.1vw;
-  place-items: end;
-  column-gap: 2.4vw;
-  margin-bottom: 3.2vw;
-}
+// .container-uplink2-9900 {
+//   display: inline-grid;
+//   grid-template-columns: repeat(1, auto);
+//   grid-template-rows: repeat(1, auto);
+//   grid-auto-flow: column;
+//   margin-right: 1.1vw;
+//   place-items: end;
+//   column-gap: 2.4vw;
+//   margin-bottom: 3.2vw;
+// }
 
 .container-uplinks {
   display: inline-grid;

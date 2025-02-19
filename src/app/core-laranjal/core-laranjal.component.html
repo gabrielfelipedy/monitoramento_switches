@@ -1,322 +1,144 @@
+<h4 class="ext-margin">SWCORE1</h4>
+
+<div class="relative">
+  <img
+    class="switch-6900"
+    src="assets/img/switches/OS6900T48.png"
+    alt="teste"
+  />
+
+  <div class="port-set">
+
+    <!-- <div class="container absolute-6900-1-16">
+      <div class="port-6900">
+        <img
+          [src]="
+            'assets/img/ports/link/link_6360_' +
+            (ports_core_laranjal[0].active ? 'up' : 'down') +
+            '.png'
+          "
+          alt="uplink_6900_up"
+          [title]="
+            'Entrada: ' +
+            ports_core_laranjal[0].inputvalue +
+            '\nSaída: ' +
+            ports_core_laranjal[0].outputvalue
+          "
+        />
+      </div>
+    </div> -->
+
+    <!-- <div class="container absolute-6900-17-32">
+        <div class="port-6900">
+            <img
+              [src]="
+                'assets/img/ports/link/link_6360_' +
+                (ports_core_laranjal[0].active ? 'up' : 'down') +
+                '.png'
+              "
+              alt="uplink_6900_up"
+              [title]="
+                'Entrada: ' +
+                ports_core_laranjal[0].inputvalue +
+                '\nSaída: ' +
+                ports_core_laranjal[0].outputvalue
+              "
+            />
+          </div>
+    </div> -->
+
+    <div class="container absolute-6900-33-48">
+        <div class="port-6900">
+            <img
+              [src]="
+                'assets/img/ports/link/link_6360_' +
+                (ports_core_laranjal[0].active ? 'up' : 'down') +
+                '.png'
+              "
+              alt="uplink_6900_up"
+              [title]="
+                'Entrada: ' +
+                ports_core_laranjal[0].inputvalue +
+                '\nSaída: ' +
+                ports_core_laranjal[0].outputvalue
+              "
+            />
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- SWITCH 2 DE EMPILHAMENTO -->
+
+<h4 class="ext-margin">SWCORE2</h4>
+
 <div class="relative">
     <img
-      class="switch-9900"
-      src="assets/img/switches/OS9900.png"
+      class="switch-6900"
+      src="assets/img/switches/OS6900T48.png"
       alt="teste"
     />
+  
+    <div class="port-set">
 
-    <div class="port-set absolute-uplinks-9900">
-      <div class="container-uplink1-9900">
-        <img
-          *ngFor="let port of ports_core_laranjal; let i = index"
-          class="block-uplink1-9900"
-          [src]="'assets/img/ports/link/link_9900_' + (port.active ? 'up' : 'down') + '.png'
-          "
-          alt="uplink_9900_up"
-          [title]="
-            'Entrada: ' + port.inputvalue + '\nSaída: ' + port.outputvalue
-          "
-        />
-
-        <!-- <img class="block-uplink1-9900" src="assets/img/ports/link/link_9900_up.png" alt="uplink_9900_down"> -->
-      </div>
-    </div>
-
-    <div class="port-set absolute-fibra-9900">
-      <div class="container-fibra-9900">
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-      </div>
-
-      <div class="container-fibra-9900">
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-      </div>
-
-      <div class="container-fibra-9900">
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-      </div>
-
-      <div class="container-fibra-9900">
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up.png"
-          alt="fibra_9900_up"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_up_upsidedown.png"
-          alt="fibra_9900_up_upsidedown"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down.png"
-          alt="fibra_9900_down"
-        />
-
-        <img
-          class="block-fibra-9900"
-          src="assets/img/ports/fibra/fibra_9900_down_upsidedown.png"
-          alt="fibra_9900_down_upsidedown"
-        />
+      <!-- <div class="container absolute-6900-1-16">
+        <div class="port-6900">
+          <img
+            [src]="
+              'assets/img/ports/link/link_6360_' +
+              (ports_core_laranjal[0].active ? 'up' : 'down') +
+              '.png'
+            "
+            alt="uplink_6900_up"
+            [title]="
+              'Entrada: ' +
+              ports_core_laranjal[0].inputvalue +
+              '\nSaída: ' +
+              ports_core_laranjal[0].outputvalue
+            "
+          />
+        </div>
+      </div> -->
+  
+      <!-- <div class="container absolute-6900-17-32">
+          <div class="port-6900">
+              <img
+                [src]="
+                  'assets/img/ports/link/link_6360_' +
+                  (ports_core_laranjal[0].active ? 'up' : 'down') +
+                  '.png'
+                "
+                alt="uplink_6900_up"
+                [title]="
+                  'Entrada: ' +
+                  ports_core_laranjal[0].inputvalue +
+                  '\nSaída: ' +
+                  ports_core_laranjal[0].outputvalue
+                "
+              />
+            </div>
+      </div> -->
+  
+      <div class="container absolute-6900-33-48">
+          <div class="port-6900">
+              <img
+                [src]="
+                  'assets/img/ports/link/link_6360_' +
+                  (ports_core_laranjal[1].active ? 'up' : 'down') +
+                  '.png'
+                "
+                alt="uplink_6900_up"
+                [title]="
+                  'Entrada: ' +
+                  ports_core_laranjal[1].inputvalue +
+                  '\nSaída: ' +
+                  ports_core_laranjal[1].outputvalue
+                "
+              />
+            </div>
       </div>
     </div>
   </div>
