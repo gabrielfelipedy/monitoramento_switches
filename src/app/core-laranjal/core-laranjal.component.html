@@ -8,7 +8,6 @@
   />
 
   <div class="port-set">
-
     <!-- <div class="container absolute-6900-1-16">
       <div class="port-6900">
         <img
@@ -47,44 +46,58 @@
           </div>
     </div> -->
 
-    <div class="container absolute-6900-33-48">
-        <div class="port-6900">
-            <img
-              [src]="
-                'assets/img/ports/link/link_6360_' +
-                (ports_core_laranjal[0].active ? 'up' : 'down') +
-                '.png'
-              "
-              alt="uplink_6900_up"
-              [title]="
-                'Entrada: ' +
-                ports_core_laranjal[0].inputvalue +
-                '\nSaída: ' +
-                ports_core_laranjal[0].outputvalue
-              "
-            />
-          </div>
+    <div class="container-6900 absolute-6900-33-48">
+      <div
+        *ngFor="let i of [].constructor(11); let index = index"
+        class="port-6900"
+      >
+        <img
+          src="
+          assets/img/ports/emptyport.png
+          "
+          alt="uplink_6900_up"
+          [title]="
+            'Entrada: ' +
+            ports_core_laranjal[1]?.inputvalue +
+            '\nSaída: ' +
+            ports_core_laranjal[1]?.outputvalue
+          "
+        />
+      </div>
+
+      <div class="port-6900">
+        <img
+          [src]="
+            'assets/img/ports/link/link_6360_' +
+            (ports_core_laranjal[0]?.active ? 'up' : 'down') +
+            '_upsidedown.png'
+          "
+          alt="uplink_6900_up"
+          [title]="
+            'Porta 44\nEntrada: ' +
+            ports_core_laranjal[0]?.inputvalue +
+            '\nSaída: ' +
+            ports_core_laranjal[0]?.outputvalue
+          "
+        />
+      </div>
     </div>
   </div>
 </div>
-
-
-
 
 <!-- SWITCH 2 DE EMPILHAMENTO -->
 
 <h4 class="ext-margin">SWCORE2</h4>
 
 <div class="relative">
-    <img
-      class="switch-6900"
-      src="assets/img/switches/OS6900T48.png"
-      alt="teste"
-    />
-  
-    <div class="port-set">
+  <img
+    class="switch-6900"
+    src="assets/img/switches/OS6900T48.png"
+    alt="teste"
+  />
 
-      <!-- <div class="container absolute-6900-1-16">
+  <div class="port-set">
+    <!-- <div class="container absolute-6900-1-16">
         <div class="port-6900">
           <img
             [src]="
@@ -102,8 +115,8 @@
           />
         </div>
       </div> -->
-  
-      <!-- <div class="container absolute-6900-17-32">
+
+    <!-- <div class="container absolute-6900-17-32">
           <div class="port-6900">
               <img
                 [src]="
@@ -121,24 +134,42 @@
               />
             </div>
       </div> -->
-  
-      <div class="container absolute-6900-33-48">
-          <div class="port-6900">
-              <img
-                [src]="
-                  'assets/img/ports/link/link_6360_' +
-                  (ports_core_laranjal[1].active ? 'up' : 'down') +
-                  '.png'
-                "
-                alt="uplink_6900_up"
-                [title]="
-                  'Entrada: ' +
-                  ports_core_laranjal[1].inputvalue +
-                  '\nSaída: ' +
-                  ports_core_laranjal[1].outputvalue
-                "
-              />
-            </div>
+
+    <div class="container-6900 absolute-6900-33-48">
+      <div
+        *ngFor="let i of [].constructor(11); let index = index"
+        class="port-6900"
+      >
+        <img
+          src="
+            assets/img/ports/emptyport.png
+            "
+          alt="uplink_6900_up"
+          [title]="
+            'Entrada: ' +
+            ports_core_laranjal[1]?.inputvalue +
+            '\nSaída: ' +
+            ports_core_laranjal[1]?.outputvalue
+          "
+        />
+      </div>
+
+      <div class="port-6900">
+        <img
+          [src]="
+            'assets/img/ports/link/link_6360_' +
+            (ports_core_laranjal[1]?.active ? 'up' : 'down') +
+            '_upsidedown.png'
+          "
+          alt="uplink_6900_up"
+          [title]="
+            'Porta 44\nEntrada: ' +
+            ports_core_laranjal[1]?.inputvalue +
+            '\nSaída: ' +
+            ports_core_laranjal[1]?.outputvalue
+          "
+        />
       </div>
     </div>
   </div>
+</div>

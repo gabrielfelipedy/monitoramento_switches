@@ -11,11 +11,12 @@ import { CommonModule } from '@angular/common';
 import { Acesso1LaranjalComponent } from './acesso1-laranjal/acesso1-laranjal.component';
 import { CoreLaranjalComponent } from './core-laranjal/core-laranjal.component';
 import { Acesso2LaranjalComponent } from './acesso2-laranjal/acesso2-laranjal.component';
+import { Acesso3LaranjalComponent } from './acesso3-laranjal/acesso3-laranjal.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, CommonModule, Acesso1LaranjalComponent, CoreLaranjalComponent, Acesso2LaranjalComponent],
+  imports: [RouterOutlet, NgFor, CommonModule, Acesso1LaranjalComponent, CoreLaranjalComponent, Acesso2LaranjalComponent, Acesso3LaranjalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -6,13 +6,28 @@
 
 /* CONSTANTS */
 
+//tamanhos de fonte
+
+$font-h1: clamp(1rem, 4vw, 5rem);
+$font-h2: clamp(1rem, 3vw, 4rem);
+$font-h3: clamp(1rem, 2vw, 3rem);
+$font-h4: clamp(1rem, 1vw, 2rem);
+
+//POSIÇÃO DAS PORTAS 1 A 12 DO SWITCH 6360
+
+$top-6360-space-ports: 2.5vw;
+$left-6360-space-ports: 26.65vw;
+$calibration-constant: 16vw; //CONSTANTE DE CALIBRAÇÃO PARA A DISTÂNCIA HORIZONTAL ENTRE OS DEMAIS GRUPOS DE PORTAS
+
+//POSIÇÃO DAS PORTAS DOS UPLINKS FIBRA
+
+$top-6360-uplink-ports: 5.1vw;
+$left-6360-uplink-ports: $left-6360-space-ports + 2.19*$calibration-constant;
+
 :root {
-  --font-h1: clamp(1rem, 4vw, 5rem);
-  --font-h2: clamp(1rem, 3vw, 4rem);
-  --font-h3: clamp(1rem, 2vw, 3rem);
 
   //tamanho dos switches
-  --tam-width-switch-6360: 90vw;
+  --tam-width-switch-6360: 79vw;
   --tam-width-switch-6900: 79vw;
   --tam-width-switch-9900: 40vw;
 
@@ -25,9 +40,6 @@
   --tam-link_9900_uplink2: 1.5vw;
 
   --tam-uplink_6360_port: 2.4vw;
-
-  --top-6360-space-ports: 7.2vw;
-  --left-6360-space-ports: 31.67vw;
 
   --top-9900-space-ports: 18.1vw;
   --left-9900-space-ports: 7.65vw;
@@ -92,10 +104,10 @@ b-debug {
 }
 
 .ext-margin {
-  margin: 1rem 1rem;
+  margin: 1rem 0;
 }
 
-/* FONT SiZES AND STYLE */
+/* TAMANHOS DE FONTE */
 
 h1,
 h2,
@@ -106,16 +118,20 @@ h3 {
 
 h1 {
   font-weight: 900;
-  font-size: var(--font-h1);
+  font-size: $font-h1;
 }
 
 h2 {
   font-weight: 700;
-  font-size: var(--font-h2);
+  font-size: $font-h2;
 }
 
 h3 {
-  font-size: var(--font-h3);
+  font-size: $font-h3;
+}
+
+h4 {
+  font-size: $font-h4;
 }
 
 /* TAMANHOS DOS SWITCHES */
@@ -140,34 +156,28 @@ h3 {
 
 /* switch os6360 */
 
-.absolute {
-  position: absolute;
-  top: var(--top-6360-space-ports);
-  left: var(--left-6360-space-ports);
-}
-
 .absolute-6360-1-12 {
   position: absolute;
-  top: var(--top-6360-space-ports);
-  left: var(--left-6360-space-ports);
+  top: $top-6360-space-ports;
+  left: $left-6360-space-ports;
 }
 
 .absolute-6360-13-24 {
   position: absolute;
-  top: var(--top-6360-space-ports);
-  left: 47.58vw;
+  top: $top-6360-space-ports;
+  left: $left-6360-space-ports + $calibration-constant;
 }
 
-.absolute-6360-uplink-rj {
-  position: absolute;
-  top: var(--top-6360-space-ports);
-  left: 63.5vw;
-}
+// .absolute-6360-uplink-rj {
+//   position: absolute;
+//   top: $top-6360-space-ports;
+//   left: $left-6360-space-ports + 2*$calibration-constant;
+// }
 
 .absolute-6360-uplink-fibra {
   position: absolute;
-  top: 10vw;
-  left: 66.4vw;
+  top: $top-6360-uplink-ports;
+  left: $left-6360-uplink-ports;;
 }
 
 .absolute-6360-console {
@@ -300,6 +310,16 @@ h3 {
   margin-right: 0.85vw;
   row-gap: 1.1vw;
   column-gap: 0.79vw;
+}
+
+.container-6900 {
+  display: inline-grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  margin-right: 0.85vw;
+  row-gap: 0.9vw;
+  column-gap: 0.58vw;
 }
 
 // .container-9900 {
