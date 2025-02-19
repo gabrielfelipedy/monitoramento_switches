@@ -203,7 +203,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   width: var(--tam-uplink_6360_port);
 
   overflow: hidden;
@@ -214,7 +214,13 @@ h3 {
   height: 100%;
   object-fit: contain;
   object-position: center;
+  transition: filter 0.3s ease-in-out;
+  cursor: pointer;
 }
+
+[class^="block"] img:hover {
+    filter: brightness(0.8);
+  }
 
 .block-9900 {
   display: inline-block;
@@ -244,16 +250,6 @@ h3 {
   // height: var(--tam-link_6360_port);
 }
 
-.block:hover,
-.block-uplink:hover,
-.block-9900:hover,
-.block-fibra-9900:hover,
-.block-uplink1-9900:hover,
-.block-uplink2-9900:hover {
-  scale: 1.2;
-  cursor: pointer;
-}
-
 .container {
   display: inline-grid;
   grid-template-columns: repeat(1, auto);
@@ -261,7 +257,7 @@ h3 {
   grid-auto-flow: column;
   margin-right: 0.85vw;
   row-gap: 1.1vw;
-  column-gap: 0.86vw;
+  column-gap: 0.79vw;
 }
 
 .container-9900 {
@@ -311,7 +307,7 @@ h3 {
   grid-template-columns: repeat(1, auto);
   grid-template-rows: repeat(1, auto);
   grid-auto-flow: column;
-  
+
   place-items: end;
   column-gap: 0.78vw;
 }

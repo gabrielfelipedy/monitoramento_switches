@@ -1,29 +1,76 @@
 <div class="center">
-    <img class="switch-6360" src="assets/img/switches/OS6360.png" alt="teste">
+  <img class="switch-6360" src="assets/img/switches/OS6360.png" alt="teste" />
 </div>
-  
-  <div class="port-set absolute">
-    <div class="container">
-   
-      <img *ngFor="let port of ports_acesso1_laranjal.slice(0, 12); let i = index" class="block" [src]="'assets/img/ports/link/link_6360_' + (port.active ? 'up' : 'down') + ((i % 2 == 0) ? '' : '_upsidedown') + '.png'" alt="link_6360_up" [title]="
-      'Porta ' + (i+1) + '\nÚltima atividade de tráfego: há ' + port.lastvalue">
-      
-      
+
+<div class="port-set">
+  <div class="container absolute-6360-1-12">
+    <div
+      *ngFor="let port of ports_acesso1_laranjal.slice(0, 12); let i = index"
+      class="block"
+    >
+      <img
+        [src]="
+          'assets/img/ports/link/link_6360_' +
+          (port.active ? 'up' : 'down') +
+          (i % 2 == 0 ? '' : '_upsidedown') +
+          '.png'
+        "
+        alt="link_6360_up"
+        [title]="
+          'Porta ' +
+          (i + 1) +
+          '\nÚltima atividade de tráfego: há ' +
+          port.lastvalue
+        "
+      />
     </div>
-  
-    <div class="container">
-      
-        <img *ngFor="let port of ports_acesso1_laranjal.slice(12, 24); let i = index" class="block" [src]="'assets/img/ports/link/link_6360_' + (port.active ? 'up' : 'down') + ((i % 2 == 0) ? '' : '_upsidedown') + '.png'" alt="link_6360_up" [title]="
-        'Porta ' + (i+13) + '\nÚltima atividade de tráfego: há ' + port.lastvalue">
-      
-    </div>
-  
-    
-    <div class="container-uplinks">
-        <img *ngFor="let port of ports_uplink_acesso1_laranjal; let i = index" class="block-uplink" [src]="'assets/img/ports/uplink/uplink_6360_' + (port.active ? 'up' : 'down') + '.png'" alt="uplink_6360_up" [title]="
-        'Entrada: ' + port.inputvalue + '\nSaída: ' + port.outputvalue
-      ">
-    </div>
-  
-    
   </div>
+
+  <div class="container absolute-6360-13-24">
+    <div
+      *ngFor="let port of ports_acesso1_laranjal.slice(12, 24); let i = index"
+      class="block"
+    >
+      <img
+        [src]="
+          'assets/img/ports/link/link_6360_' +
+          (port.active ? 'up' : 'down') +
+          (i % 2 == 0 ? '' : '_upsidedown') +
+          '.png'
+        "
+        alt="link_6360_up"
+        [title]="
+          'Porta ' +
+          (i + 13) +
+          '\nÚltima atividade de tráfego: há ' +
+          port.lastvalue
+        "
+      />
+    </div>
+  </div>
+
+  <!-- <div class="container absolute-6360-uplink-rj">
+    Monitoramento dos uplinks rj
+  </div> -->
+
+  <div class="container-uplinks absolute-6360-uplink-fibra">
+    <div
+      *ngFor="let port of ports_uplink_acesso1_laranjal; let i = index"
+      class="block-uplink"
+    >
+      <img
+        [src]="
+          'assets/img/ports/uplink/uplink_6360_' +
+          (port.active ? 'up' : 'down') +
+          '.png'
+        "
+        alt="uplink_6360_up"
+        [title]="'Porta: ' + (i+25) + '\nEntrada: ' + port.inputvalue + '\nSaída: ' + port.outputvalue"
+      />
+    </div>
+  </div>
+
+  <!-- <div class="container absolute-6360-console">
+    Porta console
+  </div> -->
+</div>

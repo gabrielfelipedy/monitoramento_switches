@@ -14,6 +14,9 @@ export class ApiObservableService {
   private Acesso1LaranjaldataSubject = new BehaviorSubject<any>(null);
   public Acesso1Laranjaldata$ = this.Acesso1LaranjaldataSubject.asObservable();
 
+  private Acesso2LaranjaldataSubject = new BehaviorSubject<any>(null);
+  public Acesso2Laranjaldata$ = this.Acesso2LaranjaldataSubject.asObservable();
+
   constructor(private http: HttpRequestService) {
     this.fetchAll()
     this.intervalFetch()
@@ -34,6 +37,10 @@ export class ApiObservableService {
 
     this.http.get(Constants.ACESSO1_LARANJAL).subscribe(data => {
       this.Acesso1LaranjaldataSubject.next(data)
+    })
+
+    this.http.get(Constants.ACESSO2_LARANJAL).subscribe(data => {
+      this.Acesso2LaranjaldataSubject.next(data)
     })
   }
 }
