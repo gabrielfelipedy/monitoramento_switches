@@ -1,1 +1,3 @@
 * Adicionar tabelinha de tráfego
+* Implementar patterns e refatorar
+* Tratar erros de quando a API estiver offline
