@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Acesso2LaranjalComponent } from './acesso2-laranjal.component';
+import { HomeComponent } from './home.component';
 
-describe('Acesso2LaranjalComponent', () => {
-  let component: Acesso2LaranjalComponent;
-  let fixture: ComponentFixture<Acesso2LaranjalComponent>;
+describe('HomeComponent', () => {
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Acesso2LaranjalComponent]
+      imports: [HomeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Acesso2LaranjalComponent);
+    fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

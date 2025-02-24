@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Acesso3LaranjalComponent } from './acesso3-laranjal.component';
+import { CoreSwitch6900Component } from './core-switch-6900.component';
 
-describe('Acesso3LaranjalComponent', () => {
-  let component: Acesso3LaranjalComponent;
-  let fixture: ComponentFixture<Acesso3LaranjalComponent>;
+describe('CoreSwitch6900Component', () => {
+  let component: CoreSwitch6900Component;
+  let fixture: ComponentFixture<CoreSwitch6900Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Acesso3LaranjalComponent]
+      imports: [CoreSwitch6900Component]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Acesso3LaranjalComponent);
+    fixture = TestBed.createComponent(CoreSwitch6900Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
