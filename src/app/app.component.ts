@@ -5,7 +5,6 @@ import { ApiObservableService } from './api-observable.service';
 import { Constants } from '../../constants';
 import { PortList } from '../../interfaces/PortList';
 import { Port } from '../../interfaces/Port';
-import { ArrayPortElement } from '../../interfaces/ArrayPortElement';
 import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { Acesso1LaranjalComponent } from './acesso1-laranjal/acesso1-laranjal.component';
@@ -22,9 +21,7 @@ import { Acesso3LaranjalComponent } from './acesso3-laranjal/acesso3-laranjal.co
 })
 export class AppComponent {
   title = 'monitoramento_switches';
-  
-  ports_core_laranjal: Array<ArrayPortElement> = new Array<ArrayPortElement>()
 
-  constructor(private httpService: HttpRequestService, private api_observable: ApiObservableService) {}
+  constructor(private httpService: HttpRequestService, public api_observable: ApiObservableService) {}
 
 }

@@ -1,0 +1,33 @@
+$color-bits-received: rgb(103, 209, 103);
+$color-bits-sent: rgb(226, 169, 62);
+$color-bits-down: rgb(255, 74, 74);
+
+.bits-received {
+  color: $color-bits-received;
+}
+
+.bits-received::before {
+  content: "▼ ";
+  color: $color-bits-received;
+  font-size: 14px;
+}
+
+.bits-sent {
+  color: $color-bits-sent;
+}
+
+.bits-sent::before {
+  content: "▲ ";
+  color: $color-bits-sent;
+  font-size: 14px;
+}
+
+.bits-down {
+  color: $color-bits-down;
+}
+
+.bits-down::before {
+  content: "✖ ";
+  color: red;
+  font-size: 14px;
+}

@@ -13,10 +13,17 @@ $font-h2: clamp(1rem, 3vw, 4rem);
 $font-h3: clamp(1rem, 2vw, 3rem);
 $font-h4: clamp(1rem, 1vw, 2rem);
 
+//TAMANHOS DOS SWITCHES
+
+$tam-width-switch-6360: 79vw;
+$tam-width-switch-6900: 79vw;
+$tam-width-switch-9900: 40vw;
+
 //POSIÇÃO DAS PORTAS 1 A 12 DO SWITCH 6360
 
 $top-6360-space-ports: 2.5vw;
 $left-6360-space-ports: 26.65vw;
+
 $calibration-constant: 16vw; //CONSTANTE DE CALIBRAÇÃO PARA A DISTÂNCIA HORIZONTAL ENTRE OS DEMAIS GRUPOS DE PORTAS
 
 //POSIÇÃO DAS PORTAS DOS UPLINKS FIBRA
@@ -25,11 +32,6 @@ $top-6360-uplink-ports: 5.1vw;
 $left-6360-uplink-ports: $left-6360-space-ports + 2.19*$calibration-constant;
 
 :root {
-
-  //tamanho dos switches
-  --tam-width-switch-6360: 79vw;
-  --tam-width-switch-6900: 79vw;
-  --tam-width-switch-9900: 40vw;
 
   --tam-link_6360_port: 1.7vw;
 
@@ -49,7 +51,13 @@ $left-6360-uplink-ports: $left-6360-space-ports + 2.19*$calibration-constant;
 
   --top-9900-space-uplinks: 6.45vw;
   --left-9900-space-uplinks: 12.25vw;
+
+  --mat-table-background-color: transparent;
+  --mat-table-header-headline-color: rgb(199, 199, 199);
+  --mat-table-row-item-label-text-color: white;
+  --mat-table-row-item-outline-color: rgb(116, 116, 116);
 }
+
 
 /* CSS RESET */
 
@@ -92,6 +100,26 @@ b-debug {
   justify-content: center;
   align-items: center;
 }
+
+.between {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.evenly {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.self-end {
+  align-self: self-end;
+  margin-left: auto;
+}
+
 
 .flex-column {
   flex-direction: column;
@@ -137,15 +165,15 @@ h4 {
 /* TAMANHOS DOS SWITCHES */
 
 .switch-6360 {
-  width: var(--tam-width-switch-6360);
+  width: $tam-width-switch-6360;
 }
 
 .switch-6900 {
-  width: var(--tam-width-switch-6900);
+  width: $tam-width-switch-6900;
 }
 
 .switch-9900 {
-  width: var(--tam-width-switch-9900);
+  width: $tam-width-switch-9900;
 }
 
 // POSIÇÕES DAS PORTAS EM CIMA DAS IMAGENS DOS SWITCHES
@@ -377,4 +405,22 @@ h4 {
 .port-set {
   display: flex;
   overflow: hidden;
+}
+
+// TABLE
+
+.mdc-data-table__table {
+  width: 28vw !important;
+  min-width: unset !important;
+  box-shadow: none !important;
+  white-space: nowrap;
+  border-spacing: 0;
+  table-layout: fixed;
+  border: 1px solid rgb(99, 99, 99) !important;
+  border-radius: 1vw;
+}
+
+table {
+  padding: 10px;
+  // backdrop-filter: brightness(80%) !important;
 }

@@ -8,7 +8,7 @@
   <div class="port-set">
     <div class="container absolute-6360-1-12">
       <div
-        *ngFor="let port of ports_acesso1_laranjal.slice(0, 12); let i = index"
+        *ngFor="let port of switch_acesso1.acess_ports.slice(0, 12); let i = index"
         class="port-6360"
       >
         <img
@@ -23,7 +23,7 @@
             'Porta ' +
             (i + 1) +
             '\nÚltima atividade de tráfego: há ' +
-            port.lastvalue
+            port.lastactive
           "
         />
       </div>
@@ -31,7 +31,7 @@
 
     <div class="container absolute-6360-13-24">
       <div
-        *ngFor="let port of ports_acesso1_laranjal.slice(12, 24); let i = index"
+        *ngFor="let port of switch_acesso1.acess_ports.slice(12, 24); let i = index"
         class="port-6360"
       >
         <img
@@ -46,7 +46,7 @@
             'Porta ' +
             (i + 13) +
             '\nÚltima atividade de tráfego: há ' +
-            port.lastvalue
+            port.lastactive
           "
         />
       </div>
@@ -58,7 +58,7 @@
 
     <div class="container-uplinks absolute-6360-uplink-fibra">
       <div
-        *ngFor="let port of ports_uplink_acesso1_laranjal; let i = index"
+        *ngFor="let port of switch_acesso1.uplink_ports; let i = index"
         class="port-6360-uplink"
       >
         <img
