@@ -1,4 +1,7 @@
 site_name: Documentação Frontend projeto Monitoramento Switches
 nav:
   - Home: index.md
+  - Instalação: instalation.md
+  - Geração da documentação:
+    - Compodocs: generate-compodocs.md
 theme: readthedocs
