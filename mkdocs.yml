@@ -1,0 +1,4 @@
+site_name: Documentação Frontend projeto Monitoramento Switches
+nav:
+  - Home: index.md
+theme: readthedocs
