@@ -8,11 +8,12 @@ import { Port } from '../../interfaces/Port';
 import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { LaranjalSubsecaoComponent } from './laranjal-subsecao/laranjal-subsecao.component';
+import { OiapoqueSubssecaoComponent } from './oiapoque-subssecao/oiapoque-subssecao.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, CommonModule, LaranjalSubsecaoComponent],
+  imports: [RouterOutlet, NgFor, CommonModule, LaranjalSubsecaoComponent, OiapoqueSubssecaoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

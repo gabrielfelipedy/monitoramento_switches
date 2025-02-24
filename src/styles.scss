@@ -1,8 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
 /* FONTS */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* CONSTANTS */
 
@@ -56,6 +54,8 @@ $left-6360-uplink-ports: $left-6360-space-ports + 2.19*$calibration-constant;
   --mat-table-header-headline-color: rgb(199, 199, 199);
   --mat-table-row-item-label-text-color: white;
   --mat-table-row-item-outline-color: rgb(116, 116, 116);
+
+  --mdc-outlined-button-label-text-color: white;
 }
 
 
@@ -71,7 +71,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: #1e1e1e;
-  font-family: "Inter", sans-serif;
+  font-family: "Mona Sans", serif;
   color: #e1e1e1;
   display: flex;
   justify-content: center;
