@@ -2,15 +2,13 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HttpRequestService } from './http-request.service';
 import { ApiObservableService } from './api-observable.service';
-import { NgFor } from '@angular/common';
-import { CommonModule } from '@angular/common';
 import { LaranjalSubsecaoComponent } from './laranjal-subsecao/laranjal-subsecao.component';
 import { OiapoqueSubssecaoComponent } from './oiapoque-subssecao/oiapoque-subssecao.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, CommonModule, LaranjalSubsecaoComponent, OiapoqueSubssecaoComponent],
+  imports: [RouterOutlet, LaranjalSubsecaoComponent, OiapoqueSubssecaoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

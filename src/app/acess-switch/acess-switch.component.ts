@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Switch } from '../../../classes/Switch';
 import { OnInit, OnDestroy } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { ApiObservableService } from '../api-observable.service';
 import { SwitchProcessorService } from '../switch-processor.service';
 import { PortList } from '../../../interfaces/PortList';
@@ -34,7 +34,6 @@ export class AcessSwitchComponent {
       this.switch_name as keyof typeof this.api_observable.observerData
     ].subscribe((data: PortList) => {
       this.switch_processor.processAcessPorts(this.switch, data?.result);
-
       console.log(`dados processados: ${this.switch_name}`);
     });
   }
