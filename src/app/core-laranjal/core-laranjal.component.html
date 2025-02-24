@@ -5,7 +5,7 @@
     <div class="ext-margin self-end">
       <table
         mat-table
-        [dataSource]="ports_core_laranjal"
+        [dataSource]="switch_core.uplink_ports"
         class="mat-elevation-z8"
       >
         <!--- Note that these columns can be defined in any order.
@@ -111,15 +111,15 @@
           <img
             [src]="
               'assets/img/ports/link/link_6360_' +
-              (ports_core_laranjal[0].active ? 'up' : 'down') +
+              (switch_core.uplink_ports[0].active ? 'up' : 'down') +
               '_upsidedown.png'
             "
             alt="uplink_6900_up"
             [title]="
               'Porta 44\nEntrada: ' +
-              ports_core_laranjal[0].inputvalue +
+              switch_core.uplink_ports[0].inputvalue +
               '\nSaída: ' +
-              ports_core_laranjal[0].outputvalue
+              switch_core.uplink_ports[0].outputvalue
             "
           />
         </div>
@@ -144,15 +144,15 @@
           <img
             [src]="
               'assets/img/ports/link/link_6360_' +
-              (ports_core_laranjal[0].active ? 'up' : 'down') +
+              (switch_core.uplink_ports[0].active ? 'up' : 'down') +
               '.png'
             "
             alt="uplink_6900_up"
             [title]="
               'Entrada: ' +
-              ports_core_laranjal[0].inputvalue +
+              switch_core.uplink_ports[0].inputvalue +
               '\nSaída: ' +
-              ports_core_laranjal[0].outputvalue
+              switch_core.uplink_ports[0].outputvalue
             "
           />
         </div>
@@ -163,15 +163,15 @@
               <img
                 [src]="
                   'assets/img/ports/link/link_6360_' +
-                  (ports_core_laranjal[0].active ? 'up' : 'down') +
+                  (switch_core.uplink_ports[0].active ? 'up' : 'down') +
                   '.png'
                 "
                 alt="uplink_6900_up"
                 [title]="
                   'Entrada: ' +
-                  ports_core_laranjal[0].inputvalue +
+                  switch_core.uplink_ports[0].inputvalue +
                   '\nSaída: ' +
-                  ports_core_laranjal[0].outputvalue
+                  switch_core.uplink_ports[0].outputvalue
                 "
               />
             </div>
@@ -192,15 +192,15 @@
           <img
             [src]="
               'assets/img/ports/link/link_6360_' +
-              (ports_core_laranjal[1].active ? 'up' : 'down') +
+              (switch_core.uplink_ports[1].active ? 'up' : 'down') +
               '_upsidedown.png'
             "
             alt="uplink_6900_up"
             [title]="
               'Porta 44\nEntrada: ' +
-              ports_core_laranjal[1].inputvalue +
+              switch_core.uplink_ports[1].inputvalue +
               '\nSaída: ' +
-              ports_core_laranjal[1].outputvalue
+              switch_core.uplink_ports[1].outputvalue
             "
           />
         </div>
