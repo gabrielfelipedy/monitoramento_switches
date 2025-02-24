@@ -10,16 +10,17 @@ import { BehaviorSubject } from 'rxjs';
 export class ApiObservableService {
 
   private CoreLaranjaldataSubject = new BehaviorSubject<any>(null);
-  public CoreLaranjaldata$ = this.CoreLaranjaldataSubject.asObservable();
-
   private Acesso1LaranjaldataSubject = new BehaviorSubject<any>(null);
-  public Acesso1Laranjaldata$ = this.Acesso1LaranjaldataSubject.asObservable();
-
   private Acesso2LaranjaldataSubject = new BehaviorSubject<any>(null);
-  public Acesso2Laranjaldata$ = this.Acesso2LaranjaldataSubject.asObservable();
-
   private Acesso3LaranjaldataSubject = new BehaviorSubject<any>(null);
-  public Acesso3Laranjaldata$ = this.Acesso3LaranjaldataSubject.asObservable();
+  
+
+  public observerData = {
+    "core_laranjal": this.CoreLaranjaldataSubject.asObservable(),
+    "acesso1_laranjal": this.Acesso1LaranjaldataSubject.asObservable(),
+    "acesso2_laranjal": this.Acesso2LaranjaldataSubject.asObservable(),
+    "acesso3_laranjal": this.Acesso3LaranjaldataSubject.asObservable()
+  }
 
   constructor(private http: HttpRequestService) {
     this.fetchAll()
