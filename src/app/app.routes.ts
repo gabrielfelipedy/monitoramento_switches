@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { LaranjalSubsecaoComponent } from './laranjal-subsecao/laranjal-subsecao.component';
 import { OiapoqueSubssecaoComponent } from './oiapoque-subssecao/oiapoque-subssecao.component';
@@ -9,3 +9,5 @@ export const routes: Routes = [
     { path: 'laranjal', component: LaranjalSubsecaoComponent},
     { path: 'oiapoque', component: OiapoqueSubssecaoComponent}
 ];
+
+RouterModule.forRoot(routes)
