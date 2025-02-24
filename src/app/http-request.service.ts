@@ -12,6 +12,6 @@ export class HttpRequestService {
   httpheader = new HttpHeaders().set('Access-Control-Allow-Origin', "*")
 
   get(url : string) {
-    return this.http.get<PortList>(url, {headers: this.httpheader })
+    return this.http.get<PortList>(url, {headers: this.httpheader }); //retorna a resposta da forma de um Subject (ou Observer)
   }
 }

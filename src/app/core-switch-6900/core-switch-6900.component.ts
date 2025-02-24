@@ -34,8 +34,8 @@ export class CoreSwitch6900Component {
       this.switch_name as keyof typeof this.api_observable.observerData
     ].subscribe((data: PortList) => {
       this.switch_processor.processUplinkPorts(this.switch_core, data?.result);
-      console.log('dados processados core laranjal:');
-      console.log(this.switch_core.uplink_ports);
+
+      console.log(`dados processados: ${this.switch_name}`);
     });
   }
 

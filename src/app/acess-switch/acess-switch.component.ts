@@ -34,9 +34,8 @@ export class AcessSwitchComponent {
       this.switch_name as keyof typeof this.api_observable.observerData
     ].subscribe((data: PortList) => {
       this.switch_processor.processAcessPorts(this.switch, data?.result);
-      console.log('dados processados acesso1 laranjal:');
-      console.log(this.switch.acess_ports);
-      console.log(this.switch.uplink_ports);
+
+      console.log(`dados processados: ${this.switch_name}`);
     });
   }
 
