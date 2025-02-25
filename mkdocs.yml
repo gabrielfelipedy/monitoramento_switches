@@ -8,32 +8,32 @@ nav:
   - Dependências: dependencies.md
 
   - Informações de design:
-    - Diagrama UML do projeto: uml.md
-    - Design Patterns aplicados: patterns.md
+    - Diagrama UML do projeto: design/uml.md
+    - Design Patterns aplicados: design/patterns.md
 
   - Utilitários do projeto:
 
     - Classes:
-      - AcessPort: acessport.md
-      - UplinkPort: uplinkport.md
-      - Switch: switch.md
+      - AcessPort: classes/acessport.md
+      - UplinkPort: classes/uplinkport.md
+      - Switch: classes/switch.md
 
-    - Constantes: constants.md
+    - Constantes: constants/constants.md
 
     - Interfaces:
-      - Port: port.md
-      - PortList: portlist.md
+      - Port: interfaces/port.md
+      - PortList: interfaces/portlist.md
 
     - Services:
-      - HttpRequestService: httprequest.md
-      - ApiObservableService: apiobservable.md
-      - SwitchProcessorService: switchprocessor.md
+      - HttpRequestService: services/httprequest.md
+      - ApiObservableService: services/apiobservable.md
+      - SwitchProcessorService: services/switchprocessor.md
 
   - Componentes:
-    - AcessSwitchComponent: acessswitch.md
-    - CoreSwitch6900Component: coreswitch6900.md
-    - HomeComponent: home.md
-    - LaranjalSubsecaoComponent: laranjalsubsecao.md
-    - OiapoqueSubsecaoComponent: oiapoquesubsecao.md
+    - AcessSwitchComponent: components/acessswitch.md
+    - CoreSwitch6900Component: components/coreswitch6900.md
+    - HomeComponent: components/home.md
+    - LaranjalSubsecaoComponent: components/laranjalsubsecao.md
+    - OiapoqueSubsecaoComponent: components/oiapoquesubsecao.md
     
 theme: readthedocs

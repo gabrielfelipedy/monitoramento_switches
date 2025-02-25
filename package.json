@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "generate-docs": "compodoc -p tsconfig.doc.json --language pt-BR",
-    "serve-docs": "compodoc -s tsconfig.doc.json"
+    "serve-docs": "compodoc -s tsconfig.doc.json",
+    "test-docs": "compodoc -p tsconfig.doc.json --coverageTest"
   },
   "private": true,
   "dependencies": {
