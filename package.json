@@ -7,9 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "generate-docs": "compodoc -p tsconfig.doc.json --language pt-BR",
-    "serve-docs": "compodoc -s tsconfig.doc.json",
-    "test-docs": "compodoc -p tsconfig.doc.json --coverageTest"
+    "generate-docs": "compodoc -p tsconfig.doc.json --language pt-BR -d public/assets/docs",
+    "serve-docs": "compodoc -s tsconfig.doc.json -d public/assets/docs",
+    "test-docs": "compodoc -p tsconfig.doc.json -d public/assets/docs --coverageTest"
   },
   "private": true,
   "dependencies": {

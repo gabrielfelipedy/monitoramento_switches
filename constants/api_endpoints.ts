@@ -1,6 +1,6 @@
 const API_URL = "http://172.18.10.201:5000"
 
-export const ApiEndpoints = {
+export const ApiEndpoints: Record<string, string> = {
     core_laranjal: `${API_URL}/json/core_lji?t=`,
     acesso1_laranjal: `${API_URL}/json/ac1_lji?t=`,
     acesso2_laranjal: `${API_URL}/json/ac2_lji?t=`,

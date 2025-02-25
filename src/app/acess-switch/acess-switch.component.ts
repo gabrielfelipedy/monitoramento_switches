@@ -31,8 +31,7 @@ export class AcessSwitchComponent {
 
   ngOnInit() {
     this.subscription = this.api_observable.observerData[
-      this.switch_name as keyof typeof this.api_observable.observerData
-    ].subscribe((data: PortList) => {
+      this.switch_name]?.subscribe((data: PortList) => {
       this.switch_processor.processAcessPorts(this.switch, data?.result);
       console.log(`dados processados: ${this.switch_name}`);
     });

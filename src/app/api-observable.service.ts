@@ -10,12 +10,12 @@ import { Observable } from 'rxjs';
 
 export class ApiObservableService {
 
-  
-  private subjects: { [key: string]: BehaviorSubject<any> } = {};
-  public observerData: { [key: string]: Observable<any> } = {};
+  private subjects: Record<string, BehaviorSubject<any>> = {};
+  public observerData: Record<string, Observable<any>> = {};
 
 
   constructor(private http: HttpRequestService) {
+    this.fillSubjects()
     this.fetchAll()
     this.intervalFetch()
   }
@@ -24,9 +24,13 @@ export class ApiObservableService {
   {
     for(let keyEndpoint in ApiEndpoints)
     {
-      this.subjects[keyEndpoint as keyof typeof this.subjects] = new BehaviorSubject<any>(null);
-      this.observerData[keyEndpoint as keyof typeof this.observerData] = this.subjects[keyEndpoint as keyof typeof this.subjects].asObservable()
+      this.subjects[keyEndpoint] = new BehaviorSubject<any>(null);
+      this.observerData[keyEndpoint] = this.subjects[keyEndpoint].asObservable()
     }
+
+    // console.log("subjects 1: ")
+    // console.log(this.subjects)
+    // console.log(this.observerData)
   }
 
 
@@ -42,10 +46,8 @@ export class ApiObservableService {
     for(let keyEndpoint in ApiEndpoints)
     {
       // console.log(`Key: ${keyEndpoint} value: ${ApiEndpoints[keyEndpoint as keyof typeof ApiEndpoints]}`)
-      this.http.get(ApiEndpoints[keyEndpoint as keyof typeof ApiEndpoints]).subscribe(data => {
-
-        console.log(`data de ${keyEndpoint}:`)
-        console.log(data)
+      this.http.get(ApiEndpoints[keyEndpoint]).subscribe(data => {
+        
         this.subjects[keyEndpoint as keyof typeof this.subjects].next(data)
       })
     }
