@@ -2,6 +2,38 @@ site_name: Documentação Frontend projeto Monitoramento Switches
 nav:
   - Home: index.md
   - Instalação: instalation.md
+
   - Geração da documentação:
     - Compodocs: generate-compodocs.md
+  - Dependências: dependencies.md
+
+  - Informações de design:
+    - Diagrama UML do projeto: uml.md
+    - Design Patterns aplicados: patterns.md
+
+  - Utilitários do projeto:
+
+    - Classes:
+      - AcessPort: acessport.md
+      - UplinkPort: uplinkport.md
+      - Switch: switch.md
+
+    - Constantes: constants.md
+
+    - Interfaces:
+      - Port: port.md
+      - PortList: portlist.md
+
+    - Services:
+      - HttpRequestService: httprequest.md
+      - ApiObservableService: apiobservable.md
+      - SwitchProcessorService: switchprocessor.md
+
+  - Componentes:
+    - AcessSwitchComponent: acessswitch.md
+    - CoreSwitch6900Component: coreswitch6900.md
+    - HomeComponent: home.md
+    - LaranjalSubsecaoComponent: laranjalsubsecao.md
+    - OiapoqueSubsecaoComponent: oiapoquesubsecao.md
+    
 theme: readthedocs

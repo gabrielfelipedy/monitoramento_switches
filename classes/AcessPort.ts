@@ -1,6 +1,6 @@
 import { ValidActivePort } from "../interfaces/ValidActivePort";
 
-export class PortAcesso implements ValidActivePort
+export class AcessPort implements ValidActivePort
 {
     numport: string;
     name: string;

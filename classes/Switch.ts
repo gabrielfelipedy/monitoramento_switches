@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
-import { PortAcesso } from './PortAcesso';
-import { PortUplink } from './PortUplink';
+import { PortAcesso } from './AcessPort';
+import { PortUplink } from './UplinkPort';
 
 export class Switch {
   description: string;
