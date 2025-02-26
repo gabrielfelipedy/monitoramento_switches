@@ -63,10 +63,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="components/CoreSwitch6900Component.html" data-type="entity-link" >CoreSwitch6900Component</a>
                             </li>
                             <li class="link">
+                                <a href="components/CoreSwitch9900Component.html" data-type="entity-link" >CoreSwitch9900Component</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/DocsComponent.html" data-type="entity-link" >DocsComponent</a>
+                            </li>
+                            <li class="link">
                                 <a href="components/HomeComponent.html" data-type="entity-link" >HomeComponent</a>
                             </li>
                             <li class="link">
                                 <a href="components/LaranjalSubsecaoComponent.html" data-type="entity-link" >LaranjalSubsecaoComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/MacapaSubsecaoComponent.html" data-type="entity-link" >MacapaSubsecaoComponent</a>
                             </li>
                             <li class="link">
                                 <a href="components/OiapoqueSubssecaoComponent.html" data-type="entity-link" >OiapoqueSubssecaoComponent</a>

@@ -165,7 +165,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Definido em <a href="" data-line="59" class="link-to-prism">src/app/switch-processor.service.ts:59</a></div>
+                                <div class="io-line">Definido em <a href="" data-line="63" class="link-to-prism">src/app/switch-processor.service.ts:63</a></div>
                             </td>
                         </tr>
 
@@ -198,8 +198,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="26"
-                                    class="link-to-prism">src/app/switch-processor.service.ts:26</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="30"
+                                    class="link-to-prism">src/app/switch-processor.service.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -277,8 +277,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="12"
-                                    class="link-to-prism">src/app/switch-processor.service.ts:12</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="16"
+                                    class="link-to-prism">src/app/switch-processor.service.ts:16</a></div>
                         </td>
                     </tr>
 
@@ -295,6 +295,7 @@
                                             <td>Nome</td>
                                                 <td>Tipo</td>
                                             <td>Opcional</td>
+                                                <td>Descrição</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -309,6 +310,10 @@
                                             </td>
 
 
+                                            <td>
+                                                    <p>Um objeto da classe Switch cujas portas serão processadas</p>
+
+                                            </td>
                                         </tr>
                                         <tr>
                                                 <td>data</td>
@@ -321,6 +326,10 @@
                                             </td>
 
 
+                                            <td>
+                                                    <p>Os dados brutos dos estados das portas</p>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -353,6 +362,10 @@ import { Switch } from &#x27;../../classes/Switch&#x27;;
 })
 export class SwitchProcessorService {
 
+  /**
+ * @param {Switch} sw  Um objeto da classe Switch cujas portas serão processadas
+ * @param {Array&lt;Port&gt;} data  Os dados brutos dos estados das portas
+ */
   processUplinkPorts(sw: Switch, data: Array&lt;Port&gt;)
   {
     for (let i &#x3D; 0; i &lt; data?.length / 2; i++) {

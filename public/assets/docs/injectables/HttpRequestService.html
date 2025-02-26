@@ -239,8 +239,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="14"
-                                    class="link-to-prism">src/app/http-request.service.ts:14</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="19"
+                                    class="link-to-prism">src/app/http-request.service.ts:19</a></div>
                         </td>
                     </tr>
 
@@ -257,6 +257,7 @@
                                             <td>Nome</td>
                                                 <td>Tipo</td>
                                             <td>Opcional</td>
+                                                <td>Descrição</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -271,6 +272,10 @@
                                             </td>
 
 
+                                            <td>
+                                                    <p>A URL pra onde será feita a requisição</p>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -280,7 +285,8 @@
 
                         </div>
                             <div class="io-description">
-                                
+                                <p>Uma Promisse encapsulando o resultado da requisição</p>
+
                             </div>
                 </td>
             </tr>
@@ -336,11 +342,15 @@ export class HttpRequestService {
 
   httpheader &#x3D; new HttpHeaders().set(&#x27;Access-Control-Allow-Origin&#x27;, &quot;*&quot;)
 
+
+  /**
+ * @param {string} url  A URL pra onde será feita a requisição
+ * @returns Uma Promisse encapsulando o resultado da requisição
+ */
   get(url : string) {
     return this.http.get&lt;PortList&gt;(url, {headers: this.httpheader }); //retorna a resposta da forma de um Subject (ou Observer). Works
   }
-}
-</code></pre>
+}</code></pre>
     </div>
 
 </div>

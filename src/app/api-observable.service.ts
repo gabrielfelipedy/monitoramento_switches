@@ -20,6 +20,7 @@ export class ApiObservableService {
     this.intervalFetch()
   }
  
+  
   fillSubjects()
   {
     for(let keyEndpoint in ApiEndpoints)
@@ -27,10 +28,6 @@ export class ApiObservableService {
       this.subjects[keyEndpoint] = new BehaviorSubject<any>(null);
       this.observerData[keyEndpoint] = this.subjects[keyEndpoint].asObservable()
     }
-
-    // console.log("subjects 1: ")
-    // console.log(this.subjects)
-    // console.log(this.observerData)
   }
 
 

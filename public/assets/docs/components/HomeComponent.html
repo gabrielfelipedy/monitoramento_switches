@@ -210,20 +210,23 @@ export class HomeComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;center ext-margin&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">
+
+&lt;div class&#x3D;&quot;center ext-margin&quot;&gt;
   &lt;h1&gt;MONITORAMENTO SWITCHES&lt;/h1&gt;
 &lt;/div&gt;
 
+&lt;div class&#x3D;&quot;container-partial&quot;&gt;
 &lt;h4&gt;Monitoramento dos switches das topologias da subseções da Justiça Federal do Amapá&lt;/h4&gt;
 
 &lt;div class&#x3D;&quot;mt-2&quot;&gt;
     
-    &lt;a class&#x3D;&quot;m-h-2 blue-button&quot; mat-flat-button href&#x3D;&quot;https://monitoramento-switches.readthedocs.io/en/latest/&quot; target&#x3D;&quot;_blank&quot;&gt;Acessar a documentação&lt;/a&gt;
+    &lt;a class&#x3D;&quot;m-h-2 blue-button&quot; mat-flat-button href&#x3D;&quot;/docs&quot; target&#x3D;&quot;_blank&quot;&gt;Acessar a documentação&lt;/a&gt;
     &lt;a class&#x3D;&quot;m-h-2 border&quot; mat-stroked-button href&#x3D;&quot;/laranjal&quot;&gt;Monitorar Laranjal&lt;/a&gt;
-    &lt;!-- &lt;a class&#x3D;&quot;m-h-2&quot; mat-stroked-button href&#x3D;&quot;https://www.google.com/&quot;&gt;Monitorar Macapá&lt;/a&gt; --&gt;
+    &lt;a class&#x3D;&quot;m-h-2 border&quot; mat-stroked-button href&#x3D;&quot;/macapa&quot;&gt;Monitorar Macapá&lt;/a&gt;
     &lt;a class&#x3D;&quot;m-h-2 border&quot; mat-stroked-button href&#x3D;&quot;/oiapoque&quot;&gt;Monitorar Oiapoque&lt;/a&gt;
 &lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
     </div>
 
 
@@ -252,8 +255,8 @@ export class HomeComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="center ext-margin">  <h1>MONITORAMENTO SWITCHES</h1></div><h4>Monitoramento dos switches das topologias da subseções da Justiça Federal do Amapá</h4><div class="mt-2">        <a class="m-h-2 blue-button" mat-flat-button href="https://monitoramento-switches.readthedocs.io/en/latest/" target="_blank">Acessar a documentação</a>    <a class="m-h-2 border" mat-stroked-button href="/laranjal">Monitorar Laranjal</a>    <!-- <a class="m-h-2" mat-stroked-button href="https://www.google.com/">Monitorar Macapá</a> -->    <a class="m-h-2 border" mat-stroked-button href="/oiapoque">Monitorar Oiapoque</a></div></div>'
-    var COMPONENTS = [{'name': 'AcessSwitchComponent', 'selector': 'app-acess-switch'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CoreSwitch6900Component', 'selector': 'app-core-switch-6900'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LaranjalSubsecaoComponent', 'selector': 'app-laranjal-subsecao'},{'name': 'OiapoqueSubssecaoComponent', 'selector': 'app-oiapoque-subssecao'}];
+        var COMPONENT_TEMPLATE = '<div><div class="center ext-margin">  <h1>MONITORAMENTO SWITCHES</h1></div><div class="container-partial"><h4>Monitoramento dos switches das topologias da subseções da Justiça Federal do Amapá</h4><div class="mt-2">        <a class="m-h-2 blue-button" mat-flat-button href="/docs" target="_blank">Acessar a documentação</a>    <a class="m-h-2 border" mat-stroked-button href="/laranjal">Monitorar Laranjal</a>    <a class="m-h-2 border" mat-stroked-button href="/macapa">Monitorar Macapá</a>    <a class="m-h-2 border" mat-stroked-button href="/oiapoque">Monitorar Oiapoque</a></div></div></div>'
+    var COMPONENTS = [{'name': 'AcessSwitchComponent', 'selector': 'app-acess-switch'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CoreSwitch6900Component', 'selector': 'app-core-switch-6900'},{'name': 'CoreSwitch9900Component', 'selector': 'app-core-switch-9900'},{'name': 'DocsComponent', 'selector': 'app-docs'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LaranjalSubsecaoComponent', 'selector': 'app-laranjal-subsecao'},{'name': 'MacapaSubsecaoComponent', 'selector': 'app-macapa-subsecao'},{'name': 'OiapoqueSubssecaoComponent', 'selector': 'app-oiapoque-subssecao'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>

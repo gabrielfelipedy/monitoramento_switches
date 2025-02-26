@@ -467,7 +467,7 @@ export class ApiObservableService {
       // console.log(&#x60;Key: ${keyEndpoint} value: ${ApiEndpoints[keyEndpoint as keyof typeof ApiEndpoints]}&#x60;)
       this.http.get(ApiEndpoints[keyEndpoint]).subscribe(data &#x3D;&gt; {
         
-        this.subjects[keyEndpoint as keyof typeof this.subjects].next(data)
+        this.subjects[keyEndpoint].next(data)
       })
     }
   }

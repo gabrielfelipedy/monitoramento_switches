@@ -9,6 +9,10 @@ import { Switch } from '../../classes/Switch';
 })
 export class SwitchProcessorService {
 
+  /**
+ * @param {Switch} sw  Um objeto da classe Switch cujas portas uplink serão processadas
+ * @param {Array<Port>} data  Os dados brutos dos estados das portas
+ */
   processUplinkPorts(sw: Switch, data: Array<Port>)
   {
     for (let i = 0; i < data?.length / 2; i++) {
@@ -23,6 +27,10 @@ export class SwitchProcessorService {
     }
   }
 
+  /**
+ * @param {Switch} sw  Um objeto da classe Switch cujas portas serão processadas
+ * @param {Array<Port>} data  Os dados brutos dos estados das portas
+ */
   processAcessPorts(sw: Switch, data: Array<Port>)
   {
     if (!data) return;
