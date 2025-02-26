@@ -1,3 +1,5 @@
+export const displayedColumns: string[] = ['name', 'inputvalue', 'outputvalue'];
+
 const API_URL = "http://172.18.10.201:5000"
 
 export const ApiEndpoints: Record<string, string> = {
