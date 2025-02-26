@@ -6,12 +6,39 @@ Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 
 ## Como rodar
 
-Execute `ng serve` para um servidor de desenvolvimento, que estará disponível em `http://localhost:4200/`. Usando a flag `--host 0.0.0.0` a aplicação ficará disponível para toda a rede local.
+### 1 - Clone o repositório localmente
+
+```nginx
+git clone https://github.com/gabrielfelipedy/monitoramento-switches
+```
+### 2 - Instale as dependências
+
+```nginx
+npm i
+```
+
+### 3 - Execute um servidor de desenvolvimento
+
+```nginx
+ng serve
+```
+
+para servir para toda a rede local:
+
+```nginx
+ng serve --host 0.0.0.0
+```
 
 
 ## Build
 
-Execute `ng build` para buildar o projeto e gerar uma versão de produção. Os arquivos de build estarão disponíveis no diretório `dist/`
+Execute o seguinte comando:
+
+```nginx
+ng build
+```
+
+Isso gerará uma pasta chamada `/dist` contendo os arquivos gerados prontos para o ambiente de produção.
 
 ## Testes unitários
 
@@ -19,6 +46,4 @@ Rode `ng test` para executar os testes via [Karma](https://karma-runner.github.i
 
 ## Documentação
 
-Você pode acessar a [documentação detalhada](hhttps://monitoramento-switches.readthedocs.io/en/latest/) aqui.
-
-Se caso queira um resumo mais direto, pode acessar essa [outra documentação](hhttps://monitoramento-switches.readthedocs.io/en/latest/) gerada automaticamente com o [Compodocs](https://compodoc.app/).
+Você pode acessar a documentação na rota `/docs` da aplicação contendo informações sobre como o projeto foi construído, bem como guias para atualizá-lo e mantê-lo
