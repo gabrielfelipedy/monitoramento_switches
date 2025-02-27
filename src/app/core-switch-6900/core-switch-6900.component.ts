@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
 import { MatTableModule } from '@angular/material/table';
 import { Switch } from '../../../classes/Switch';
 import { SwitchProcessorService } from '../switch-processor.service';
+import { displayedColumns } from '../../../constants/api_endpoints';
 
 @Component({
   selector: 'app-core-switch-6900',
@@ -18,7 +19,7 @@ import { SwitchProcessorService } from '../switch-processor.service';
 export class CoreSwitch6900Component {
   @Input() switch_name!: string;
 
-  displayedColumns: string[] = ['name', 'inputvalue', 'outputvalue'];
+  displayedColumns: string[] = displayedColumns;
 
   switch_core = new Switch(this.switch_name);
 

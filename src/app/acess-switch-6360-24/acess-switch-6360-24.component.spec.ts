@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AcessSwitchComponent } from './acess-switch.component';
+import { AcessSwitch636024Component } from './acess-switch-6360-24.component';
 
 describe('AcessSwitchComponent', () => {
-  let component: AcessSwitchComponent;
-  let fixture: ComponentFixture<AcessSwitchComponent>;
+  let component: AcessSwitch636024Component;
+  let fixture: ComponentFixture<AcessSwitch636024Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AcessSwitchComponent]
+      imports: [AcessSwitch636024Component]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AcessSwitchComponent);
+    fixture = TestBed.createComponent(AcessSwitch636024Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
