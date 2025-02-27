@@ -10,13 +10,13 @@ import { NgFor, CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-core-switch-9900',
+  selector: 'app-switch-9900',
   standalone: true,
   imports: [NgFor, CommonModule, MatTableModule],
-  templateUrl: './core-switch-9900.component.html',
-  styleUrl: './core-switch-9900.component.scss',
+  templateUrl: './switch-9900.component.html',
+  styleUrl: './switch-9900.component.scss',
 })
-export class CoreSwitch9900Component {
+export class Switch9900Component {
   @Input() switch_name!: string;
 
   displayedColumns: string[] = displayedColumns;

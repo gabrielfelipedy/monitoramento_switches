@@ -8,13 +8,13 @@ import { PortList } from '../../../interfaces/PortList';
 import { CommonModule, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-acess-switch-6360-24',
+  selector: 'app-switch-6360-24',
   standalone: true,
   imports: [NgFor, CommonModule],
-  templateUrl: './acess-switch-6360-24.component.html',
-  styleUrl: './acess-switch-6360-24.component.scss',
+  templateUrl: './switch-6360-24.component.html',
+  styleUrl: './switch-6360-24.component.scss',
 })
-export class AcessSwitch636024Component {
+export class Switch636024Component {
   @Input() switch_name!: string;
 
   switch = new Switch(this.switch_name);
