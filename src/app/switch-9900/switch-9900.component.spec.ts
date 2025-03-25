@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoreSwitch6900Component } from './core-switch-6900.component';
+import { Switch9900Component } from './switch-9900.component';
 
-describe('CoreSwitch6900Component', () => {
-  let component: CoreSwitch6900Component;
-  let fixture: ComponentFixture<CoreSwitch6900Component>;
+describe('Switch9900Component', () => {
+  let component: Switch9900Component;
+  let fixture: ComponentFixture<Switch9900Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CoreSwitch6900Component]
+      imports: [Switch9900Component]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CoreSwitch6900Component);
+    fixture = TestBed.createComponent(Switch9900Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

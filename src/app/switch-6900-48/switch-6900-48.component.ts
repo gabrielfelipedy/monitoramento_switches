@@ -10,13 +10,13 @@ import { SwitchProcessorService } from '../switch-processor.service';
 import { displayedColumns } from '../../../constants/api_endpoints';
 
 @Component({
-  selector: 'app-core-switch-6900',
+  selector: 'app-switch-6900-48',
   standalone: true,
   imports: [NgFor, CommonModule, MatTableModule],
-  templateUrl: './core-switch-6900.component.html',
-  styleUrl: './core-switch-6900.component.scss',
+  templateUrl: './switch-6900-48.component.html',
+  styleUrl: './switch-6900-48.component.scss',
 })
-export class CoreSwitch6900Component {
+export class Switch690048Component {
   @Input() switch_name!: string;
 
   displayedColumns: string[] = displayedColumns;
