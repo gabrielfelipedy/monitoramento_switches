@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { AcessSwitchComponent } from '../acess-switch/acess-switch.component';
-import { CoreSwitch6900Component } from '../core-switch-6900/core-switch-6900.component';
+import { Switch636024Component } from '../switch-6360-24/switch-6360-24.component';
+import { Switch690048Component } from '../switch-6900-48/switch-6900-48.component';
 
 @Component({
   selector: 'app-oiapoque-subssecao',
   standalone: true,
-  imports: [AcessSwitchComponent, CoreSwitch6900Component],
+  imports: [Switch636024Component, Switch690048Component],
   templateUrl: './oiapoque-subssecao.component.html',
   styleUrl: './oiapoque-subssecao.component.scss'
 })

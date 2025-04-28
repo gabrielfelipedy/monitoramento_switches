@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "generate-docs": "compodoc -p tsconfig.doc.json --language pt-BR -d public/assets/docs -c .compodocsrc.yml",
+    "serve-docs": "compodoc -s tsconfig.doc.json -d public/assets/docs",
+    "test-docs": "compodoc -p tsconfig.doc.json -d public/assets/docs --coverageTest"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +31,7 @@
     "@angular-devkit/build-angular": "^18.2.11",
     "@angular/cli": "^18.2.11",
     "@angular/compiler-cli": "^18.2.0",
+    "@compodoc/compodoc": "^1.1.26",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",

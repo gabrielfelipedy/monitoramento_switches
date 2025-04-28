@@ -1,0 +1,890 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>monitoramento-switches documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">monitoramento-switches documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Digite para pesquisar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Componentes</li>
+  <li class="breadcrumb-item"
+  >
+  CoreSwitch6900Component</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>Arquivo</h3>
+</p>
+<p class="comment">
+    <code>src/app/core-switch-6900/core-switch-6900.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-core-switch-6900</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>NgFor</code>
+                            <code>CommonModule</code>
+                            <code>MatTableModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./core-switch-6900.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./core-switch-6900.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propriedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#displayedColumns" >displayedColumns</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#subscription" >subscription</a>
+                            </li>
+                            <li>
+                                <a href="#switch_core" >switch_core</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#switch_name" >switch_name</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Construtor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(api_observable: <a href="../injectables/ApiObservableService.html" target="_self">ApiObservableService</a>, switch_processor: <a href="../injectables/SwitchProcessorService.html" target="_self">SwitchProcessorService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido em <a href="" data-line="25" class="link-to-prism">src/app/core-switch-6900/core-switch-6900.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parâmetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nome</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>api_observable</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ApiObservableService.html" target="_self" >ApiObservableService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Não
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>switch_processor</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SwitchProcessorService.html" target="_self" >SwitchProcessorService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Não
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section data-compodoc="block-inputs">
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="switch_name"></a>
+                        <b>switch_name</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido em <a href="" data-line="19" class="link-to-prism">src/app/core-switch-6900/core-switch-6900.component.ts:19</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Definido em <a href="" data-line="42"
+                                    class="link-to-prism">src/app/core-switch-6900/core-switch-6900.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Retorna : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Definido em <a href="" data-line="32"
+                                    class="link-to-prism">src/app/core-switch-6900/core-switch-6900.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Retorna : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Propriedades
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayedColumns"></a>
+                    <span class="name">
+                        <span ><b>displayedColumns</b></span>
+                        <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor padrão : </i><code>[&#x27;name&#x27;, &#x27;inputvalue&#x27;, &#x27;outputvalue&#x27;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido em <a href="" data-line="21" class="link-to-prism">src/app/core-switch-6900/core-switch-6900.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subscription"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>subscription</b></span>
+                        <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido em <a href="" data-line="25" class="link-to-prism">src/app/core-switch-6900/core-switch-6900.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="switch_core"></a>
+                    <span class="name">
+                        <span ><b>switch_core</b></span>
+                        <a href="#switch_core"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor padrão : </i><code>new Switch(this.switch_name)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido em <a href="" data-line="23" class="link-to-prism">src/app/core-switch-6900/core-switch-6900.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule, NgFor } from &#x27;@angular/common&#x27;;
+import { OnInit, OnDestroy } from &#x27;@angular/core&#x27;;
+import { Component, Input } from &#x27;@angular/core&#x27;;
+import { ApiObservableService } from &#x27;../api-observable.service&#x27;;
+import { PortList } from &#x27;../../../interfaces/PortList&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { MatTableModule } from &#x27;@angular/material/table&#x27;;
+import { Switch } from &#x27;../../../classes/Switch&#x27;;
+import { SwitchProcessorService } from &#x27;../switch-processor.service&#x27;;
+
+@Component({
+  selector: &#x27;app-core-switch-6900&#x27;,
+  standalone: true,
+  imports: [NgFor, CommonModule, MatTableModule],
+  templateUrl: &#x27;./core-switch-6900.component.html&#x27;,
+  styleUrl: &#x27;./core-switch-6900.component.scss&#x27;,
+})
+export class CoreSwitch6900Component {
+  @Input() switch_name!: string;
+
+  displayedColumns: string[] &#x3D; [&#x27;name&#x27;, &#x27;inputvalue&#x27;, &#x27;outputvalue&#x27;];
+
+  switch_core &#x3D; new Switch(this.switch_name);
+
+  private subscription!: Subscription;
+
+  constructor(
+    private api_observable: ApiObservableService,
+    private switch_processor: SwitchProcessorService
+  ) {}
+
+  ngOnInit() {
+    this.subscription &#x3D; this.api_observable.observerData[
+      this.switch_name
+    ]?.subscribe((data: PortList) &#x3D;&gt; {
+      this.switch_processor.processUplinkPorts(this.switch_core, data?.result);
+
+      console.log(&#x60;dados processados: ${this.switch_name}&#x60;);
+    });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;center flex-column&quot;&gt;
+    
+      &lt;div class&#x3D;&quot;ext-margin&quot;&gt;
+        &lt;table
+          mat-table
+          [dataSource]&#x3D;&quot;switch_core.uplink_ports&quot;
+          class&#x3D;&quot;mat-elevation-z8&quot;
+        &gt;
+          &lt;!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition&quot; --&gt;
+  
+          &lt;!-- Name Column --&gt;
+          &lt;ng-container matColumnDef&#x3D;&quot;name&quot;&gt;
+            &lt;th mat-header-cell *matHeaderCellDef&gt;Nome&lt;/th&gt;
+            &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;{{ element.name }}&lt;/td&gt;
+          &lt;/ng-container&gt;
+  
+          &lt;!-- Weight Column --&gt;
+          &lt;ng-container matColumnDef&#x3D;&quot;inputvalue&quot;&gt;
+            &lt;th mat-header-cell *matHeaderCellDef&gt;Bits recebidos&lt;/th&gt;
+            &lt;td
+              [class]&#x3D;&quot;element.active ? &#x27;bits-received&#x27; : &#x27;bits-down&#x27;&quot;
+              mat-cell
+              *matCellDef&#x3D;&quot;let element&quot;
+            &gt;
+              {{ element.inputvalue }}
+            &lt;/td&gt;
+          &lt;/ng-container&gt;
+  
+          &lt;!-- Symbol Column --&gt;
+          &lt;ng-container matColumnDef&#x3D;&quot;outputvalue&quot;&gt;
+            &lt;th mat-header-cell *matHeaderCellDef&gt;Bits enviados&lt;/th&gt;
+            &lt;td
+              [class]&#x3D;&quot;element.active ? &#x27;bits-sent&#x27; : &#x27;bits-down&#x27;&quot;
+              mat-cell
+              *matCellDef&#x3D;&quot;let element&quot;
+            &gt;
+              {{ element.outputvalue }}
+            &lt;/td&gt;
+          &lt;/ng-container&gt;
+  
+          &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumns&quot;&gt;&lt;/tr&gt;
+          &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumns&quot;&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    
+  
+    &lt;h4 class&#x3D;&quot;ext-margin&quot;&gt;SWCORE1&lt;/h4&gt;
+  
+    &lt;div class&#x3D;&quot;relative&quot;&gt;
+      &lt;img
+        class&#x3D;&quot;switch-6900&quot;
+        src&#x3D;&quot;assets/img/switches/OS6900T48.png&quot;
+        alt&#x3D;&quot;switch-6900&quot;
+      /&gt;
+  
+      &lt;div class&#x3D;&quot;port-set&quot;&gt;
+        &lt;!-- &lt;div class&#x3D;&quot;container absolute-6900-1-16&quot;&gt;
+        &lt;div class&#x3D;&quot;port-6900&quot;&gt;
+          &lt;img
+            [src]&#x3D;&quot;
+              &#x27;assets/img/ports/link/link_6360_&#x27; +
+              (ports_core_laranjal[0].active ? &#x27;up&#x27; : &#x27;down&#x27;) +
+              &#x27;.png&#x27;
+            &quot;
+            alt&#x3D;&quot;uplink_6900_up&quot;
+            [title]&#x3D;&quot;
+              &#x27;Entrada: &#x27; +
+              ports_core_laranjal[0].inputvalue +
+              &#x27;\nSaída: &#x27; +
+              ports_core_laranjal[0].outputvalue
+            &quot;
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt; --&gt;
+  
+        &lt;!-- &lt;div class&#x3D;&quot;container absolute-6900-17-32&quot;&gt;
+          &lt;div class&#x3D;&quot;port-6900&quot;&gt;
+              &lt;img
+                [src]&#x3D;&quot;
+                  &#x27;assets/img/ports/link/link_6360_&#x27; +
+                  (ports_core_laranjal[0].active ? &#x27;up&#x27; : &#x27;down&#x27;) +
+                  &#x27;.png&#x27;
+                &quot;
+                alt&#x3D;&quot;uplink_6900_up&quot;
+                [title]&#x3D;&quot;
+                  &#x27;Entrada: &#x27; +
+                  ports_core_laranjal[0].inputvalue +
+                  &#x27;\nSaída: &#x27; +
+                  ports_core_laranjal[0].outputvalue
+                &quot;
+              /&gt;
+            &lt;/div&gt;
+      &lt;/div&gt; --&gt;
+  
+        &lt;div class&#x3D;&quot;container-6900 absolute-6900-33-48&quot;&gt;
+          &lt;div
+            *ngFor&#x3D;&quot;let i of [].constructor(11); let index &#x3D; index&quot;
+            class&#x3D;&quot;port-6900&quot;
+          &gt;
+            &lt;img
+              src&#x3D;&quot;
+            assets/img/ports/emptyport.png
+            &quot;
+            /&gt;
+          &lt;/div&gt;
+  
+          &lt;div class&#x3D;&quot;port-6900&quot;&gt;
+            &lt;img
+              [src]&#x3D;&quot;
+                &#x27;assets/img/ports/link/link_6360_&#x27; +
+                (switch_core.uplink_ports[0].active ? &#x27;up&#x27; : &#x27;down&#x27;) +
+                &#x27;_upsidedown.png&#x27;
+              &quot;
+              [title]&#x3D;&quot;
+                &#x27;Porta 44\nEntrada: &#x27; +
+                switch_core.uplink_ports[0].inputvalue +
+                &#x27;\nSaída: &#x27; +
+                switch_core.uplink_ports[0].outputvalue
+              &quot;
+            /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;!-- SWITCH 2 DE EMPILHAMENTO --&gt;
+  
+    &lt;h4 class&#x3D;&quot;ext-margin&quot;&gt;SWCORE2&lt;/h4&gt;
+  
+    &lt;div class&#x3D;&quot;relative&quot;&gt;
+      &lt;img
+        class&#x3D;&quot;switch-6900&quot;
+        src&#x3D;&quot;assets/img/switches/OS6900T48.png&quot;
+        alt&#x3D;&quot;switch-6900&quot;
+      /&gt;
+  
+      &lt;div class&#x3D;&quot;port-set&quot;&gt;
+        &lt;!-- &lt;div class&#x3D;&quot;container absolute-6900-1-16&quot;&gt;
+          &lt;div class&#x3D;&quot;port-6900&quot;&gt;
+            &lt;img
+              [src]&#x3D;&quot;
+                &#x27;assets/img/ports/link/link_6360_&#x27; +
+                (switch_core.uplink_ports[0].active ? &#x27;up&#x27; : &#x27;down&#x27;) +
+                &#x27;.png&#x27;
+              &quot;
+              alt&#x3D;&quot;uplink_6900_up&quot;
+              [title]&#x3D;&quot;
+                &#x27;Entrada: &#x27; +
+                switch_core.uplink_ports[0].inputvalue +
+                &#x27;\nSaída: &#x27; +
+                switch_core.uplink_ports[0].outputvalue
+              &quot;
+            /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt; --&gt;
+  
+        &lt;!-- &lt;div class&#x3D;&quot;container absolute-6900-17-32&quot;&gt;
+            &lt;div class&#x3D;&quot;port-6900&quot;&gt;
+                &lt;img
+                  [src]&#x3D;&quot;
+                    &#x27;assets/img/ports/link/link_6360_&#x27; +
+                    (switch_core.uplink_ports[0].active ? &#x27;up&#x27; : &#x27;down&#x27;) +
+                    &#x27;.png&#x27;
+                  &quot;
+                  alt&#x3D;&quot;uplink_6900_up&quot;
+                  [title]&#x3D;&quot;
+                    &#x27;Entrada: &#x27; +
+                    switch_core.uplink_ports[0].inputvalue +
+                    &#x27;\nSaída: &#x27; +
+                    switch_core.uplink_ports[0].outputvalue
+                  &quot;
+                /&gt;
+              &lt;/div&gt;
+        &lt;/div&gt; --&gt;
+  
+        &lt;div class&#x3D;&quot;container-6900 absolute-6900-33-48&quot;&gt;
+          &lt;div
+            *ngFor&#x3D;&quot;let i of [].constructor(11); let index &#x3D; index&quot;
+            class&#x3D;&quot;port-6900&quot;
+          &gt;
+            &lt;img
+              src&#x3D;&quot;
+              assets/img/ports/emptyport.png&quot;
+            /&gt;
+          &lt;/div&gt;
+  
+          &lt;div class&#x3D;&quot;port-6900&quot;&gt;
+            &lt;img
+              [src]&#x3D;&quot;
+                &#x27;assets/img/ports/link/link_6360_&#x27; +
+                (switch_core.uplink_ports[1].active ? &#x27;up&#x27; : &#x27;down&#x27;) +
+                &#x27;_upsidedown.png&#x27;
+              &quot;
+              [title]&#x3D;&quot;
+                &#x27;Porta 44\nEntrada: &#x27; +
+                switch_core.uplink_ports[1].inputvalue +
+                &#x27;\nSaída: &#x27; +
+                switch_core.uplink_ports[1].outputvalue
+              &quot;
+            /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento HTML</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento HTML com diretiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="center flex-column">          <div class="ext-margin">        <table          mat-table          [dataSource]="switch_core.uplink_ports"          class="mat-elevation-z8"        >          <!--- Note that these columns can be defined in any order.            The actual rendered columns are set as a property on the row definition" -->            <!-- Name Column -->          <ng-container matColumnDef="name">            <th mat-header-cell *matHeaderCellDef>Nome</th>            <td mat-cell *matCellDef="let element">{{ element.name }}</td>          </ng-container>            <!-- Weight Column -->          <ng-container matColumnDef="inputvalue">            <th mat-header-cell *matHeaderCellDef>Bits recebidos</th>            <td              [class]="element.active ? \'bits-received\' : \'bits-down\'"              mat-cell              *matCellDef="let element"            >              {{ element.inputvalue }}            </td>          </ng-container>            <!-- Symbol Column -->          <ng-container matColumnDef="outputvalue">            <th mat-header-cell *matHeaderCellDef>Bits enviados</th>            <td              [class]="element.active ? \'bits-sent\' : \'bits-down\'"              mat-cell              *matCellDef="let element"            >              {{ element.outputvalue }}            </td>          </ng-container>            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>        </table>      </div>          <h4 class="ext-margin">SWCORE1</h4>      <div class="relative">      <img        class="switch-6900"        src="assets/img/switches/OS6900T48.png"        alt="switch-6900"      />        <div class="port-set">        <!-- <div class="container absolute-6900-1-16">        <div class="port-6900">          <img            [src]="              \'assets/img/ports/link/link_6360_\' +              (ports_core_laranjal[0].active ? \'up\' : \'down\') +              \'.png\'            "            alt="uplink_6900_up"            [title]="              \'Entrada: \' +              ports_core_laranjal[0].inputvalue +              \'\nSaída: \' +              ports_core_laranjal[0].outputvalue            "          />        </div>      </div> -->          <!-- <div class="container absolute-6900-17-32">          <div class="port-6900">              <img                [src]="                  \'assets/img/ports/link/link_6360_\' +                  (ports_core_laranjal[0].active ? \'up\' : \'down\') +                  \'.png\'                "                alt="uplink_6900_up"                [title]="                  \'Entrada: \' +                  ports_core_laranjal[0].inputvalue +                  \'\nSaída: \' +                  ports_core_laranjal[0].outputvalue                "              />            </div>      </div> -->          <div class="container-6900 absolute-6900-33-48">          <div            *ngFor="let i of [].constructor(11); let index = index"            class="port-6900"          >            <img              src="            assets/img/ports/emptyport.png            "            />          </div>            <div class="port-6900">            <img              [src]="                \'assets/img/ports/link/link_6360_\' +                (switch_core.uplink_ports[0].active ? \'up\' : \'down\') +                \'_upsidedown.png\'              "              [title]="                \'Porta 44\nEntrada: \' +                switch_core.uplink_ports[0].inputvalue +                \'\nSaída: \' +                switch_core.uplink_ports[0].outputvalue              "            />          </div>        </div>      </div>    </div>      <!-- SWITCH 2 DE EMPILHAMENTO -->      <h4 class="ext-margin">SWCORE2</h4>      <div class="relative">      <img        class="switch-6900"        src="assets/img/switches/OS6900T48.png"        alt="switch-6900"      />        <div class="port-set">        <!-- <div class="container absolute-6900-1-16">          <div class="port-6900">            <img              [src]="                \'assets/img/ports/link/link_6360_\' +                (switch_core.uplink_ports[0].active ? \'up\' : \'down\') +                \'.png\'              "              alt="uplink_6900_up"              [title]="                \'Entrada: \' +                switch_core.uplink_ports[0].inputvalue +                \'\nSaída: \' +                switch_core.uplink_ports[0].outputvalue              "            />          </div>        </div> -->          <!-- <div class="container absolute-6900-17-32">            <div class="port-6900">                <img                  [src]="                    \'assets/img/ports/link/link_6360_\' +                    (switch_core.uplink_ports[0].active ? \'up\' : \'down\') +                    \'.png\'                  "                  alt="uplink_6900_up"                  [title]="                    \'Entrada: \' +                    switch_core.uplink_ports[0].inputvalue +                    \'\nSaída: \' +                    switch_core.uplink_ports[0].outputvalue                  "                />              </div>        </div> -->          <div class="container-6900 absolute-6900-33-48">          <div            *ngFor="let i of [].constructor(11); let index = index"            class="port-6900"          >            <img              src="              assets/img/ports/emptyport.png"            />          </div>            <div class="port-6900">            <img              [src]="                \'assets/img/ports/link/link_6360_\' +                (switch_core.uplink_ports[1].active ? \'up\' : \'down\') +                \'_upsidedown.png\'              "              [title]="                \'Porta 44\nEntrada: \' +                switch_core.uplink_ports[1].inputvalue +                \'\nSaída: \' +                switch_core.uplink_ports[1].outputvalue              "            />          </div>        </div>      </div>    </div>  </div></div>'
+    var COMPONENTS = [{'name': 'AcessSwitchComponent', 'selector': 'app-acess-switch'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CoreSwitch6900Component', 'selector': 'app-core-switch-6900'},{'name': 'CoreSwitch9900Component', 'selector': 'app-core-switch-9900'},{'name': 'DocsComponent', 'selector': 'app-docs'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LaranjalSubsecaoComponent', 'selector': 'app-laranjal-subsecao'},{'name': 'MacapaSubsecaoComponent', 'selector': 'app-macapa-subsecao'},{'name': 'OiapoqueSubssecaoComponent', 'selector': 'app-oiapoque-subssecao'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CoreSwitch6900Component'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> resultados correspondentes "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">Nenhum resultado correspondente "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CoreSwitch6900Component.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

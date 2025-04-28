@@ -1,27 +1,49 @@
-# MonitoramentoSwitches
+# Monitoramento Switches
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Um sistema voltado para o monitoramento dos equipamentos de infraestrutura da topologia de rede das subseções da Justiça Federal do Amapá.
 
-## Development server
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Como rodar
 
-## Code scaffolding
+### 1 - Clone o repositório localmente
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```nginx
+git clone https://github.com/gabrielfelipedy/monitoramento-switches
+```
+### 2 - Instale as dependências
+
+```nginx
+npm i
+```
+
+### 3 - Execute um servidor de desenvolvimento
+
+```nginx
+ng serve
+```
+
+para servir para toda a rede local:
+
+```nginx
+ng serve --host 0.0.0.0
+```
+
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Execute o seguinte comando:
 
-## Running unit tests
+```nginx
+ng build
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Isso gerará uma pasta chamada `/dist` contendo os arquivos gerados prontos para o ambiente de produção.
 
-## Running end-to-end tests
+## Testes unitários
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Rode `ng test` para executar os testes via [Karma](https://karma-runner.github.io).
 
-## Further help
+## Documentação
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Você pode acessar a documentação na rota `/docs` da aplicação contendo informações sobre como o projeto foi construído, bem como guias para atualizá-lo e mantê-lo

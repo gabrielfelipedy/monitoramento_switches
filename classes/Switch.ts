@@ -1,34 +1,34 @@
 import { Observable } from 'rxjs';
-import { PortAcesso } from './PortAcesso';
-import { PortUplink } from './PortUplink';
+import { AcessPort } from './AcessPort';
+import { UplinkPort } from './UplinkPort';
 
 export class Switch {
   description: string;
-  acess_ports: Array<PortAcesso>;
-  uplink_ports: Array<PortUplink>;
+  acess_ports: Array<AcessPort>;
+  uplink_ports: Array<UplinkPort>;
 
   constructor(description: string) {
     this.description = description;
-    this.acess_ports = new Array<PortAcesso>();
-    this.uplink_ports = new Array<PortUplink>();
+    this.acess_ports = new Array<AcessPort>();
+    this.uplink_ports = new Array<UplinkPort>();
   }
 
   clearAcessPorts()
   {
-    this.acess_ports = []
+    this.acess_ports = new Array<AcessPort>()
   }
 
   clearUplinkPorts()
   {
-    this.uplink_ports = []
+    this.uplink_ports = new Array<UplinkPort>()
   }
 
-  addAcessPort(port: PortAcesso)
+  addAcessPort(port: AcessPort)
   {
     this.acess_ports.push(port)
   }
 
-  addUpLinkPort(port: PortUplink)
+  addUpLinkPort(port: UplinkPort)
   {
     this.uplink_ports.push(port)
   }
