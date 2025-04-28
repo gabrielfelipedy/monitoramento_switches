@@ -15,12 +15,12 @@ export class Switch {
 
   clearAcessPorts()
   {
-    this.acess_ports = []
+    this.acess_ports = new Array<AcessPort>()
   }
 
   clearUplinkPorts()
   {
-    this.uplink_ports = []
+    this.uplink_ports = new Array<UplinkPort>()
   }
 
   addAcessPort(port: AcessPort)

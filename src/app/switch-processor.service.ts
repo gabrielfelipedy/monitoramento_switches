@@ -15,6 +15,9 @@ export class SwitchProcessorService {
  */
   processUplinkPorts(sw: Switch, data: Array<Port>)
   {
+    //sw.clearAcessPorts();
+    sw.clearUplinkPorts();
+
     for (let i = 0; i < data?.length / 2; i++) {
       let newPort = new UplinkPort(
         data[i].itemid, //numport
@@ -40,7 +43,7 @@ export class SwitchProcessorService {
     });
 
     sw.clearAcessPorts();
-    sw.clearUplinkPorts();
+    //sw.clearUplinkPorts();
 
     let temp = new Array<Port>();
 
