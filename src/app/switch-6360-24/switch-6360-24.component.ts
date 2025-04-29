@@ -34,6 +34,7 @@ export class Switch636024Component {
       this.switch_name]?.subscribe((data: PortList) => {
       this.switch_processor.processAcessPorts(this.switch, data?.result);
       console.log(`dados processados: ${this.switch_name}`);
+      console.log(this.switch)
     });
   }
 
