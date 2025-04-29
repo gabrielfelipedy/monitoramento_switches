@@ -37,6 +37,7 @@ export class Switch9900Component {
       this.switch_processor.processUplinkPorts(this.switch_core, data?.result);
 
       console.log(`dados processados: ${this.switch_name}`);
+      console.log(this.switch_core)
     });
   }
 
